@@ -1,4 +1,4 @@
-"G:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant"
+"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant"
 -- Configuring done
 -- Generating done
--- Build files have been written to: G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug
+-- Build files have been written to: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug

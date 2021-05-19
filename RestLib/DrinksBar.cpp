@@ -8,8 +8,8 @@
 #include "AbstractDish.hpp"
 
 namespace RestLib {
-    Dishtype DrinksBar::OrderDrink(const DrinkType &dishType) {
-        Dishtype _dish {nullptr};
+    DishType DrinksBar::OrderDrink(const DrinkType &dishType) {
+        DishType _dish {nullptr};
 
         switch (dishType) {
             case DrinkType::Cola:

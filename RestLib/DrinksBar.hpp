@@ -19,7 +19,7 @@ namespace RestLib {
         enum class DrinkType : int {
             Cola, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine
         };
-        static Dishtype OrderDrink(DrinkType const &drinkType);
+        static DishType OrderDrink(DrinkType const &drinkType);
     protected:
 
     private:

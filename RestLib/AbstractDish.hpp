@@ -37,7 +37,7 @@ namespace RestLib {
         std::string dishName;
 
     };
-    using  Dishtype = std::unique_ptr<AbstractDish>;
+    using  DishType = std::unique_ptr<AbstractDish>;
 }
 
 #endif //MAIN_CPP_ABSTRACTDISH_HPP

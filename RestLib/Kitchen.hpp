@@ -6,10 +6,29 @@
 #define FINAL_PROJECT_KITCHEN_HPP
 
 
-class Kitchen {
+#include <memory>
+#include "AbstractDish.hpp"
+namespace RestLib {
 
-    int M;
-};
+
+    class Kitchen {
+
+
+    public :
+        enum class DishType : int {
+            PizzaMargherita, VegetableSoup
+        };
+
+        static DishType CreatDish(DishType const &dishType);
+
+        Kitchen() = delete;
+        ~Kitchen() = delete;
+    protected:
+
+    private:
+    };
+}
+
 
 
 #endif //FINAL_PROJECT_KITCHEN_HPP
