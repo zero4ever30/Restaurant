@@ -7,7 +7,7 @@
 
 
 class test {
-
+    int Hallo {0};
 };
 
 

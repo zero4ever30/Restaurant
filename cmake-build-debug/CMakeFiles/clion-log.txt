@@ -1,4 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project"
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Final Project/cmake-build-debug
+"G:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant"
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.19 or higher is required.  You are running version 3.17.5
+
+
+-- Configuring incomplete, errors occurred!
