@@ -60,9 +60,59 @@ include RestLib\CMakeFiles\RestLib.dir\progress.make
 # Include the compile flags for this target's objects.
 include RestLib\CMakeFiles\RestLib.dir\flags.make
 
+RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.obj: RestLib\CMakeFiles\RestLib.dir\flags.make
+RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.obj: ..\RestLib\AbstractDish.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.obj"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\RestLib.dir\AbstractDish.cpp.obj /FdCMakeFiles\RestLib.dir\RestLib.pdb /FS -c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\AbstractDish.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
+RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/AbstractDish.cpp.i"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\RestLib.dir\AbstractDish.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\AbstractDish.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
+RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/AbstractDish.cpp.s"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\RestLib.dir\AbstractDish.cpp.s /c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\AbstractDish.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
+RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.obj: RestLib\CMakeFiles\RestLib.dir\flags.make
+RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.obj: ..\RestLib\DrinksBar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\RestLib.dir\DrinksBar.cpp.obj /FdCMakeFiles\RestLib.dir\RestLib.pdb /FS -c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\DrinksBar.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
+RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/DrinksBar.cpp.i"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\RestLib.dir\DrinksBar.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\DrinksBar.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
+RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/DrinksBar.cpp.s"
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\RestLib.dir\DrinksBar.cpp.s /c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\DrinksBar.cpp"
+<<
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+
 RestLib\CMakeFiles\RestLib.dir\Kitchen.cpp.obj: RestLib\CMakeFiles\RestLib.dir\flags.make
 RestLib\CMakeFiles\RestLib.dir\Kitchen.cpp.obj: ..\RestLib\Kitchen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
 	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
 	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\RestLib.dir\Kitchen.cpp.obj /FdCMakeFiles\RestLib.dir\RestLib.pdb /FS -c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\Kitchen.cpp"
@@ -87,7 +137,7 @@ RestLib\CMakeFiles\RestLib.dir\Kitchen.cpp.s: cmake_force
 
 RestLib\CMakeFiles\RestLib.dir\test.cpp.obj: RestLib\CMakeFiles\RestLib.dir\flags.make
 RestLib\CMakeFiles\RestLib.dir\test.cpp.obj: ..\RestLib\test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object RestLib/CMakeFiles/RestLib.dir/test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object RestLib/CMakeFiles/RestLib.dir/test.cpp.obj"
 	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
 	C:\PROGRA~2\MICROS~4\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\RestLib.dir\test.cpp.obj /FdCMakeFiles\RestLib.dir\RestLib.pdb /FS -c "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\RestLib\test.cpp"
@@ -112,17 +162,21 @@ RestLib\CMakeFiles\RestLib.dir\test.cpp.s: cmake_force
 
 # Object files for target RestLib
 RestLib_OBJECTS = \
+"CMakeFiles\RestLib.dir\AbstractDish.cpp.obj" \
+"CMakeFiles\RestLib.dir\DrinksBar.cpp.obj" \
 "CMakeFiles\RestLib.dir\Kitchen.cpp.obj" \
 "CMakeFiles\RestLib.dir\test.cpp.obj"
 
 # External object files for target RestLib
 RestLib_EXTERNAL_OBJECTS =
 
+RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.obj
+RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.obj
 RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\Kitchen.cpp.obj
 RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\test.cpp.obj
 RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\build.make
 RestLib\RestLib.lib: RestLib\CMakeFiles\RestLib.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library RestLib.lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library RestLib.lib"
 	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
 	$(CMAKE_COMMAND) -P CMakeFiles\RestLib.dir\cmake_clean_target.cmake
 	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"

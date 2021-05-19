@@ -142,6 +142,72 @@ RestLib\fast:
 	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
 .PHONY : RestLib\fast
 
+AbstractDish.obj: AbstractDish.cpp.obj
+
+.PHONY : AbstractDish.obj
+
+# target to build an object file
+AbstractDish.cpp.obj:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.obj
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : AbstractDish.cpp.obj
+
+AbstractDish.i: AbstractDish.cpp.i
+
+.PHONY : AbstractDish.i
+
+# target to preprocess a source file
+AbstractDish.cpp.i:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.i
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : AbstractDish.cpp.i
+
+AbstractDish.s: AbstractDish.cpp.s
+
+.PHONY : AbstractDish.s
+
+# target to generate assembly for a file
+AbstractDish.cpp.s:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\AbstractDish.cpp.s
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : AbstractDish.cpp.s
+
+DrinksBar.obj: DrinksBar.cpp.obj
+
+.PHONY : DrinksBar.obj
+
+# target to build an object file
+DrinksBar.cpp.obj:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.obj
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : DrinksBar.cpp.obj
+
+DrinksBar.i: DrinksBar.cpp.i
+
+.PHONY : DrinksBar.i
+
+# target to preprocess a source file
+DrinksBar.cpp.i:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.i
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : DrinksBar.cpp.i
+
+DrinksBar.s: DrinksBar.cpp.s
+
+.PHONY : DrinksBar.s
+
+# target to generate assembly for a file
+DrinksBar.cpp.s:
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug"
+	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make /nologo -$(MAKEFLAGS) RestLib\CMakeFiles\RestLib.dir\DrinksBar.cpp.s
+	cd "G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib"
+.PHONY : DrinksBar.cpp.s
+
 Kitchen.obj: Kitchen.cpp.obj
 
 .PHONY : Kitchen.obj
@@ -217,6 +283,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RestLib
+	@echo ... AbstractDish.obj
+	@echo ... AbstractDish.i
+	@echo ... AbstractDish.s
+	@echo ... DrinksBar.obj
+	@echo ... DrinksBar.i
+	@echo ... DrinksBar.s
 	@echo ... Kitchen.obj
 	@echo ... Kitchen.i
 	@echo ... Kitchen.s

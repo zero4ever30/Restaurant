@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RestLib.dir/AbstractDish.cpp.obj"
+  "CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
   "CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
   "CMakeFiles/RestLib.dir/test.cpp.obj"
   "RestLib.lib"

@@ -132,6 +132,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/AbstractDish.cpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/AbstractDish.hpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/DrinksBar.cpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/DrinksBar.hpp">
+			<Option target="RestLib"/>
+		</Unit>
 		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/Kitchen.cpp">
 			<Option target="RestLib"/>
 		</Unit>
