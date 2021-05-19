@@ -4,147 +4,155 @@
 	<Project>
 		<Option title="Final_Project"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;CMake Files\RestLib\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Final_Project">
-				<Option output="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Final_Project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug"/>
+				<Option output="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/Final_Project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 Final_Project"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 Final_Project"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Final_Project/fast">
-				<Option output="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Final_Project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug"/>
+				<Option output="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/Final_Project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 Final_Project/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 Final_Project/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RestLib">
-				<Option output="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/libRestLib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib"/>
+				<Option output="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib/RestLib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 RestLib"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 RestLib"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RestLib/fast">
-				<Option output="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/libRestLib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib"/>
+				<Option output="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib/RestLib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="G:\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 RestLib/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 RestLib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;G:\Dokumente\Fachhochschule\6. Semester\PIC_Programmieren in C++\Labor\Restaurant\cmake-build-debug\RestLib\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Kitchen.cpp">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/Kitchen.cpp">
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Kitchen.hpp">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/Kitchen.hpp">
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/test.cpp">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/test.cpp">
 			<Option target="Final_Project"/>
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/test.hpp">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/test.hpp">
 			<Option target="Final_Project"/>
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/main.cpp">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/main.cpp">
 			<Option target="Final_Project"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/CMakeLists.txt">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/CMakeLists.txt">
+		<Unit filename="G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\RestLib\"/>
 		</Unit>
 	</Project>

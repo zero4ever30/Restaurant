@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Kitchen.cpp" "C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
-  "C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/test.cpp" "C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/CMakeFiles/RestLib.dir/test.cpp.obj"
+  "G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/Kitchen.cpp" "G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
+  "G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/RestLib/test.cpp" "G:/Dokumente/Fachhochschule/6. Semester/PIC_Programmieren in C++/Labor/Restaurant/cmake-build-debug/RestLib/CMakeFiles/RestLib.dir/test.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
