@@ -4,3 +4,6 @@
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.cpp
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.hpp
 
+RestLib/CMakeFiles/RestLib.dir/test.cpp.obj: ../RestLib/test.cpp
+RestLib/CMakeFiles/RestLib.dir/test.cpp.obj: ../RestLib/test.hpp
+

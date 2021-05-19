@@ -8,6 +8,7 @@
 
 class Kitchen {
 
+    int M;
 };
 
 

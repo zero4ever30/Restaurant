@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
+  "CMakeFiles/RestLib.dir/test.cpp.obj"
   "libRestLib.a"
   "libRestLib.pdb"
 )

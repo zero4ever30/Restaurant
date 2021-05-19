@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Final Project/RestLib
+# Install script for directory: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

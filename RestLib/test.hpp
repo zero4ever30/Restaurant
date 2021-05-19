@@ -8,6 +8,11 @@
 
 class test {
     int Hallo {0};
+    int Momme {321};
+    int a {45};
+    
+    int h {57};
+    int M ;
 };
 
 

@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project"
+CMAKE_SOURCE_DIR = "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project\cmake-build-debug\CMakeFiles" "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Final Project\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -154,6 +154,33 @@ RestLib/fast:
 	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/build
 .PHONY : RestLib/fast
 
+RestLib/test.obj: RestLib/test.cpp.obj
+
+.PHONY : RestLib/test.obj
+
+# target to build an object file
+RestLib/test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/test.cpp.obj
+.PHONY : RestLib/test.cpp.obj
+
+RestLib/test.i: RestLib/test.cpp.i
+
+.PHONY : RestLib/test.i
+
+# target to preprocess a source file
+RestLib/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/test.cpp.i
+.PHONY : RestLib/test.cpp.i
+
+RestLib/test.s: RestLib/test.cpp.s
+
+.PHONY : RestLib/test.s
+
+# target to generate assembly for a file
+RestLib/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/test.cpp.s
+.PHONY : RestLib/test.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -191,6 +218,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Final_Project
 	@echo ... RestLib
+	@echo ... RestLib/test.obj
+	@echo ... RestLib/test.i
+	@echo ... RestLib/test.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
