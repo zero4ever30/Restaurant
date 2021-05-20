@@ -38,9 +38,9 @@ int main() {
     // 12 Vektor mit Datentyp Customer
     vector<unique_ptr<Customer>> vCustomer;
 
-    vCustomer.push_back(make_unique<Customer>("Fred Firestone"));
-    vCustomer.push_back(make_unique<Customer>("Homer Simpson"));
-    vCustomer.push_back(make_unique<Customer>("Peter Griffin"));
+    vCustomer.push_back(make_unique<Customer>("Fred", "Firestone"));
+    vCustomer.push_back(make_unique<Customer>("Homer","Simpson"));
+    vCustomer.push_back(make_unique<Customer>("Peter", "Griffin"));
 
     // 13 Servieren der Gerichte
     for(const auto &customer: vCustomer){

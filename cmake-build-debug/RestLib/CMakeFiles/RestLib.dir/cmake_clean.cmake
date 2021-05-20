@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RestLib.dir/AbstractDish.cpp.obj"
-  "CMakeFiles/RestLib.dir/Customer.cpp.obj"
-  "CMakeFiles/RestLib.dir/Dishes.cpp.obj"
-  "CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
-  "CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
-  "CMakeFiles/RestLib.dir/Restaurant.cpp.obj"
+  "CMakeFiles/RestLib.dir/AbstractDish.cpp.o"
+  "CMakeFiles/RestLib.dir/Customer.cpp.o"
+  "CMakeFiles/RestLib.dir/Dishes.cpp.o"
+  "CMakeFiles/RestLib.dir/DrinksBar.cpp.o"
+  "CMakeFiles/RestLib.dir/Kitchen.cpp.o"
+  "CMakeFiles/RestLib.dir/Restaurant.cpp.o"
+  "CMakeFiles/RestLib.dir/item.cpp.o"
   "libRestLib.a"
   "libRestLib.pdb"
 )

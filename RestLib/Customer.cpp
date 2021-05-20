@@ -6,8 +6,8 @@
 using namespace std;
 
 namespace RestLib {
-    Customer::Customer(const string && _customerName)
-            : customerName {_customerName}
+    Customer::Customer(const string _customerName , const string _customerLastName)
+            : customerName {_customerName} , customerLastName{_customerLastName}
     {}
 
     void Customer::ServeDish(DishType &_servedDish) {
@@ -24,6 +24,6 @@ namespace RestLib {
     }
 
     string Customer::getName() const {
-        return customerName;
+        return customerLastName;
     }
 }

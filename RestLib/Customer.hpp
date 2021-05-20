@@ -10,6 +10,7 @@
 #include <memory>
 #include "AbstractDish.hpp"
 #include "vector"
+#include "Restaurant.hpp"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ namespace RestLib {
     class Customer {
     public:
         Customer() = delete;
-        explicit Customer(const string && _customerName);
+        explicit Customer(const string  _customerName , const string _customerLastName);
 
     public:
         void ServeDish(DishType &_servedDish);
@@ -27,10 +28,14 @@ namespace RestLib {
     protected:
 
     private:
-        string customerName;
+        string customerName {""};
+        string customerLastName {""};
         float customerToPay;
         DishType customerDish;
         vector<string> customerHistory;
+
+
+        friend Customer& RestLib::Restaurant::FindCustomer(std::string _customerLastName);
     };
 }
 

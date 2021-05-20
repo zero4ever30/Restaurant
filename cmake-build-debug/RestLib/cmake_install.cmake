@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib
+# Install script for directory: /cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Final_Project")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump.exe")
 endif()
 
