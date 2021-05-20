@@ -130,10 +130,16 @@
 		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/AbstractDish.hpp">
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Cutomer.cpp">
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Customer.cpp">
 			<Option target="RestLib"/>
 		</Unit>
-		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Cutomer.hpp">
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Customer.hpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Dishes.cpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Dishes.hpp">
 			<Option target="RestLib"/>
 		</Unit>
 		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/DrinksBar.cpp">

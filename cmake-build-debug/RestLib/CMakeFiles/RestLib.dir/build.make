@@ -88,22 +88,35 @@ RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/AbstractDish.cpp.s"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\AbstractDish.cpp" -o CMakeFiles\RestLib.dir\AbstractDish.cpp.s
 
-RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
-RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.obj: ../RestLib/Cutomer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.obj"
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\Cutomer.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Cutomer.cpp"
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj: ../RestLib/Customer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\Customer.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Customer.cpp"
 
-RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/Cutomer.cpp.i"
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Cutomer.cpp" > CMakeFiles\RestLib.dir\Cutomer.cpp.i
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/Customer.cpp.i"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Customer.cpp" > CMakeFiles\RestLib.dir\Customer.cpp.i
 
-RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/Cutomer.cpp.s"
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Cutomer.cpp" -o CMakeFiles\RestLib.dir\Cutomer.cpp.s
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/Customer.cpp.s"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Customer.cpp" -o CMakeFiles\RestLib.dir\Customer.cpp.s
+
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj: ../RestLib/Dishes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\Dishes.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Dishes.cpp"
+
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/Dishes.cpp.i"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Dishes.cpp" > CMakeFiles\RestLib.dir\Dishes.cpp.i
+
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/Dishes.cpp.s"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Dishes.cpp" -o CMakeFiles\RestLib.dir\Dishes.cpp.s
 
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/DrinksBar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\DrinksBar.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\DrinksBar.cpp"
 
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.i: cmake_force
@@ -116,7 +129,7 @@ RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.s: cmake_force
 
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\Kitchen.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Kitchen.cpp"
 
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.i: cmake_force
@@ -130,7 +143,8 @@ RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.s: cmake_force
 # Object files for target RestLib
 RestLib_OBJECTS = \
 "CMakeFiles/RestLib.dir/AbstractDish.cpp.obj" \
-"CMakeFiles/RestLib.dir/Cutomer.cpp.obj" \
+"CMakeFiles/RestLib.dir/Customer.cpp.obj" \
+"CMakeFiles/RestLib.dir/Dishes.cpp.obj" \
 "CMakeFiles/RestLib.dir/DrinksBar.cpp.obj" \
 "CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
 
@@ -138,12 +152,13 @@ RestLib_OBJECTS = \
 RestLib_EXTERNAL_OBJECTS =
 
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.obj
-RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.obj
+RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj
+RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/build.make
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libRestLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libRestLib.a"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && $(CMAKE_COMMAND) -P CMakeFiles\RestLib.dir\cmake_clean_target.cmake
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\RestLib.dir\link.txt --verbose=$(VERBOSE)
 

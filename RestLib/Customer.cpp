@@ -2,7 +2,7 @@
 // Created by Momme Sherif on 19/05/2021.
 //
 
-#include "Cutomer.hpp"
+#include "Customer.hpp"
 using namespace std;
 
 namespace RestLib {

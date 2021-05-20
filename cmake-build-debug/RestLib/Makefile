@@ -170,32 +170,59 @@ AbstractDish.cpp.s:
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.s
 .PHONY : AbstractDish.cpp.s
 
-Cutomer.obj: Cutomer.cpp.obj
+Customer.obj: Customer.cpp.obj
 
-.PHONY : Cutomer.obj
+.PHONY : Customer.obj
 
 # target to build an object file
-Cutomer.cpp.obj:
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.obj
-.PHONY : Cutomer.cpp.obj
+Customer.cpp.obj:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj
+.PHONY : Customer.cpp.obj
 
-Cutomer.i: Cutomer.cpp.i
+Customer.i: Customer.cpp.i
 
-.PHONY : Cutomer.i
+.PHONY : Customer.i
 
 # target to preprocess a source file
-Cutomer.cpp.i:
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.i
-.PHONY : Cutomer.cpp.i
+Customer.cpp.i:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Customer.cpp.i
+.PHONY : Customer.cpp.i
 
-Cutomer.s: Cutomer.cpp.s
+Customer.s: Customer.cpp.s
 
-.PHONY : Cutomer.s
+.PHONY : Customer.s
 
 # target to generate assembly for a file
-Cutomer.cpp.s:
-	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Cutomer.cpp.s
-.PHONY : Cutomer.cpp.s
+Customer.cpp.s:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Customer.cpp.s
+.PHONY : Customer.cpp.s
+
+Dishes.obj: Dishes.cpp.obj
+
+.PHONY : Dishes.obj
+
+# target to build an object file
+Dishes.cpp.obj:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj
+.PHONY : Dishes.cpp.obj
+
+Dishes.i: Dishes.cpp.i
+
+.PHONY : Dishes.i
+
+# target to preprocess a source file
+Dishes.cpp.i:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.i
+.PHONY : Dishes.cpp.i
+
+Dishes.s: Dishes.cpp.s
+
+.PHONY : Dishes.s
+
+# target to generate assembly for a file
+Dishes.cpp.s:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.s
+.PHONY : Dishes.cpp.s
 
 DrinksBar.obj: DrinksBar.cpp.obj
 
@@ -263,9 +290,12 @@ help:
 	@echo ... AbstractDish.obj
 	@echo ... AbstractDish.i
 	@echo ... AbstractDish.s
-	@echo ... Cutomer.obj
-	@echo ... Cutomer.i
-	@echo ... Cutomer.s
+	@echo ... Customer.obj
+	@echo ... Customer.i
+	@echo ... Customer.s
+	@echo ... Dishes.obj
+	@echo ... Dishes.i
+	@echo ... Dishes.s
 	@echo ... DrinksBar.obj
 	@echo ... DrinksBar.i
 	@echo ... DrinksBar.s

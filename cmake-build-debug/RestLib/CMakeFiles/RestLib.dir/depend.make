@@ -4,13 +4,20 @@
 RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.obj: ../RestLib/AbstractDish.cpp
 RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.obj: ../RestLib/AbstractDish.hpp
 
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj: ../RestLib/AbstractDish.hpp
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj: ../RestLib/Customer.cpp
+RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj: ../RestLib/Customer.hpp
+
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj: ../RestLib/AbstractDish.hpp
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj: ../RestLib/Dishes.cpp
+RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj: ../RestLib/Dishes.hpp
+
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/DrinksBar.cpp
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/DrinksBar.hpp
 
+RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/AbstractDish.hpp
+RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Dishes.hpp
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.cpp
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.hpp
-
-RestLib/CMakeFiles/RestLib.dir/test.cpp.obj: ../RestLib/test.cpp
-RestLib/CMakeFiles/RestLib.dir/test.cpp.obj: ../RestLib/test.hpp
 

@@ -2,8 +2,8 @@
 // Created by Momme Sherif on 19/05/2021.
 //
 
-#ifndef FINAL_PROJECT_CUTOMER_HPP
-#define FINAL_PROJECT_CUTOMER_HPP
+#ifndef FINAL_PROJECT_CUSTOMER_HPP
+#define FINAL_PROJECT_CUSTOMER_HPP
 
 
 #include <iostream>
@@ -34,4 +34,4 @@ namespace RestLib {
     };
 }
 
-#endif //FINAL_PROJECT_CUTOMER_HPP
+#endif //FINAL_PROJECT_CUSTOMER_HPP

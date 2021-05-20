@@ -15,11 +15,11 @@ namespace RestLib {
 
 
     public :
-        enum class DishType : int {
+        enum class _DishType : int {
             PizzaMargherita, VegetableSoup
         };
 
-        static DishType CreatDish(DishType const &dishType);
+        static RestLib::DishType CreatDish(_DishType const &dishType);
 
         Kitchen() = delete;
         ~Kitchen() = delete;
