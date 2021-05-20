@@ -9,4 +9,4 @@ add_subdirectory(RestLib)
 include_directories(RestLib)
 link_libraries(RestLib)
 
-add_executable(Final_Project main.cpp)
+add_executable(Final_Project main.cpp RestLib/Restaurant.cpp RestLib/Restaurant.hpp)

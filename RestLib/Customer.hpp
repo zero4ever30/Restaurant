@@ -30,7 +30,7 @@ namespace RestLib {
         string customerName;
         float customerToPay;
         DishType customerDish;
-        vector<DishType> customerDishes;
+        vector<string> customerHistory;
     };
 }
 

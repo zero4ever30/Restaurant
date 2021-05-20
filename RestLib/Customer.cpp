@@ -13,12 +13,14 @@ namespace RestLib {
     void Customer::ServeDish(DishType &_servedDish) {
         customerDish = move(_servedDish);
         cout << "The " << customerDish->GetDishName() << " for " << this->getName() << endl;
-        this->customerDishes.push_back(move(customerDish));
+
     }
 
     void Customer::EatDish() {
         cout << this->getName() << " eats " << customerDish->GetDishName() << "." <<  endl;
+        this->customerHistory.push_back(customerDish->GetDishName());
         customerDish = nullptr;
+
     }
 
     string Customer::getName() const {

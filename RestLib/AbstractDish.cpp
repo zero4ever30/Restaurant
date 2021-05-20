@@ -22,10 +22,10 @@ namespace RestLib {
     }
 
     int AbstractDish::GetNumberIngredients() const {
-        return vIngredients.size();
+        return Used_Ingredients.size();
     }
 
     void AbstractDish::AddIngredients(const std::string& _ingredient) {
-        vIngredients.push_back(_ingredient);
+        Used_Ingredients.push_back(_ingredient);
     }
 }

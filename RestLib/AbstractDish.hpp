@@ -34,6 +34,7 @@ namespace RestLib {
 
     private:
         std::vector<std::string> vIngredients;
+        std::vector<std::string> Used_Ingredients;
         std::string dishName;
 
     };

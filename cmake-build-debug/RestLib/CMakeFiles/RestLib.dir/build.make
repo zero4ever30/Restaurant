@@ -140,13 +140,27 @@ RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/Kitchen.cpp.s"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Kitchen.cpp" -o CMakeFiles\RestLib.dir\Kitchen.cpp.s
 
+RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.obj: RestLib/CMakeFiles/RestLib.dir/flags.make
+RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.obj: ../RestLib/Restaurant.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.obj"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\RestLib.dir\Restaurant.cpp.obj -c "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Restaurant.cpp"
+
+RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/Restaurant.cpp.i"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Restaurant.cpp" > CMakeFiles\RestLib.dir\Restaurant.cpp.i
+
+RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/Restaurant.cpp.s"
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\RestLib\Restaurant.cpp" -o CMakeFiles\RestLib.dir\Restaurant.cpp.s
+
 # Object files for target RestLib
 RestLib_OBJECTS = \
 "CMakeFiles/RestLib.dir/AbstractDish.cpp.obj" \
 "CMakeFiles/RestLib.dir/Customer.cpp.obj" \
 "CMakeFiles/RestLib.dir/Dishes.cpp.obj" \
 "CMakeFiles/RestLib.dir/DrinksBar.cpp.obj" \
-"CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
+"CMakeFiles/RestLib.dir/Kitchen.cpp.obj" \
+"CMakeFiles/RestLib.dir/Restaurant.cpp.obj"
 
 # External object files for target RestLib
 RestLib_EXTERNAL_OBJECTS =
@@ -156,9 +170,10 @@ RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Customer.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj
+RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.obj
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/build.make
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libRestLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libRestLib.a"
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && $(CMAKE_COMMAND) -P CMakeFiles\RestLib.dir\cmake_clean_target.cmake
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1\RestLib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\RestLib.dir\link.txt --verbose=$(VERBOSE)
 

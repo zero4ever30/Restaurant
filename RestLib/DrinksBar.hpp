@@ -20,6 +20,9 @@ namespace RestLib {
             Cola, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine
         };
         static DishType OrderDrink(DrinkType const &drinkType);
+
+        DrinksBar() = delete;
+        ~DrinksBar() = delete;
     protected:
 
     private:

@@ -278,6 +278,33 @@ Kitchen.cpp.s:
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.s
 .PHONY : Kitchen.cpp.s
 
+Restaurant.obj: Restaurant.cpp.obj
+
+.PHONY : Restaurant.obj
+
+# target to build an object file
+Restaurant.cpp.obj:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.obj
+.PHONY : Restaurant.cpp.obj
+
+Restaurant.i: Restaurant.cpp.i
+
+.PHONY : Restaurant.i
+
+# target to preprocess a source file
+Restaurant.cpp.i:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.i
+.PHONY : Restaurant.cpp.i
+
+Restaurant.s: Restaurant.cpp.s
+
+.PHONY : Restaurant.s
+
+# target to generate assembly for a file
+Restaurant.cpp.s:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.s
+.PHONY : Restaurant.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -302,6 +329,9 @@ help:
 	@echo ... Kitchen.obj
 	@echo ... Kitchen.i
 	@echo ... Kitchen.s
+	@echo ... Restaurant.obj
+	@echo ... Restaurant.i
+	@echo ... Restaurant.s
 .PHONY : help
 
 

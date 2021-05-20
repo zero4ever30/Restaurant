@@ -154,6 +154,33 @@ RestLib/fast:
 	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/build
 .PHONY : RestLib/fast
 
+RestLib/Restaurant.obj: RestLib/Restaurant.cpp.obj
+
+.PHONY : RestLib/Restaurant.obj
+
+# target to build an object file
+RestLib/Restaurant.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.obj
+.PHONY : RestLib/Restaurant.cpp.obj
+
+RestLib/Restaurant.i: RestLib/Restaurant.cpp.i
+
+.PHONY : RestLib/Restaurant.i
+
+# target to preprocess a source file
+RestLib/Restaurant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.i
+.PHONY : RestLib/Restaurant.cpp.i
+
+RestLib/Restaurant.s: RestLib/Restaurant.cpp.s
+
+.PHONY : RestLib/Restaurant.s
+
+# target to generate assembly for a file
+RestLib/Restaurant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.s
+.PHONY : RestLib/Restaurant.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -191,6 +218,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Final_Project
 	@echo ... RestLib
+	@echo ... RestLib/Restaurant.obj
+	@echo ... RestLib/Restaurant.i
+	@echo ... RestLib/Restaurant.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

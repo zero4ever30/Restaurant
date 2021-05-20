@@ -154,6 +154,14 @@
 		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Kitchen.hpp">
 			<Option target="RestLib"/>
 		</Unit>
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Restaurant.cpp">
+			<Option target="Final_Project"/>
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/Restaurant.hpp">
+			<Option target="Final_Project"/>
+			<Option target="RestLib"/>
+		</Unit>
 		<Unit filename="C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/main.cpp">
 			<Option target="Final_Project"/>
 		</Unit>
