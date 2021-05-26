@@ -37,3 +37,8 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib/third-party/libfort/cmake_install.cmake")
+endif()
+

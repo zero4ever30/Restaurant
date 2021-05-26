@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RestLib.dir/Customer.cpp.obj"
   "CMakeFiles/RestLib.dir/Dishes.cpp.obj"
   "CMakeFiles/RestLib.dir/DrinksBar.cpp.obj"
+  "CMakeFiles/RestLib.dir/GUI.cpp.obj"
   "CMakeFiles/RestLib.dir/Kitchen.cpp.obj"
   "CMakeFiles/RestLib.dir/Restaurant.cpp.obj"
   "CMakeFiles/RestLib.dir/item.cpp.obj"

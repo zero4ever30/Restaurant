@@ -17,6 +17,16 @@ RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/DrinksBar.cpp
 RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.obj: ../RestLib/DrinksBar.hpp
 
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/third-party/libfort/lib/fort.h
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/third-party/libfort/lib/fort.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/AbstractDish.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/Customer.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/GUI.cpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/GUI.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/Restaurant.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/item.hpp
+RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj: ../RestLib/order.hpp
+
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Dishes.hpp
 RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.obj: ../RestLib/Kitchen.cpp

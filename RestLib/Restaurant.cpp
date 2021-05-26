@@ -65,7 +65,7 @@ namespace RestLib
         }
     }
 
-    void Restaurant::AddToCustomers(Customer & _newCustomer) {
+    void Restaurant::AddToCustomers(Customer _newCustomer) {
         vCustomers.push_back(std::move(_newCustomer));
     }
 

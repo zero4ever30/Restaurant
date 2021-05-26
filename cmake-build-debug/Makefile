@@ -85,6 +85,30 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -95,6 +119,28 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -154,32 +200,31 @@ RestLib/fast:
 	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/build
 .PHONY : RestLib/fast
 
-RestLib/Restaurant.obj: RestLib/Restaurant.cpp.obj
+#=============================================================================
+# Target rules for targets named headers
 
-.PHONY : RestLib/Restaurant.obj
+# Build rule for target.
+headers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 headers
+.PHONY : headers
 
-# target to build an object file
-RestLib/Restaurant.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.obj
-.PHONY : RestLib/Restaurant.cpp.obj
+# fast build rule for target.
+headers/fast:
+	$(MAKE) $(MAKESILENT) -f RestLib\third-party\libfort\CMakeFiles\headers.dir\build.make RestLib/third-party/libfort/CMakeFiles/headers.dir/build
+.PHONY : headers/fast
 
-RestLib/Restaurant.i: RestLib/Restaurant.cpp.i
+#=============================================================================
+# Target rules for targets named fort
 
-.PHONY : RestLib/Restaurant.i
+# Build rule for target.
+fort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 fort
+.PHONY : fort
 
-# target to preprocess a source file
-RestLib/Restaurant.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.i
-.PHONY : RestLib/Restaurant.cpp.i
-
-RestLib/Restaurant.s: RestLib/Restaurant.cpp.s
-
-.PHONY : RestLib/Restaurant.s
-
-# target to generate assembly for a file
-RestLib/Restaurant.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/RestLib/Restaurant.cpp.s
-.PHONY : RestLib/Restaurant.cpp.s
+# fast build rule for target.
+fort/fast:
+	$(MAKE) $(MAKESILENT) -f RestLib\third-party\libfort\lib\CMakeFiles\fort.dir\build.make RestLib/third-party/libfort/lib/CMakeFiles/fort.dir/build
+.PHONY : fort/fast
 
 main.obj: main.cpp.obj
 
@@ -215,12 +260,15 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... headers
 	@echo ... Final_Project
 	@echo ... RestLib
-	@echo ... RestLib/Restaurant.obj
-	@echo ... RestLib/Restaurant.i
-	@echo ... RestLib/Restaurant.s
+	@echo ... fort
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -74,6 +74,40 @@ CMAKE_BINARY_DIR = "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restau
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -95,6 +129,18 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -251,6 +297,33 @@ DrinksBar.cpp.s:
 	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.s
 .PHONY : DrinksBar.cpp.s
 
+GUI.obj: GUI.cpp.obj
+
+.PHONY : GUI.obj
+
+# target to build an object file
+GUI.cpp.obj:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/GUI.cpp.obj
+.PHONY : GUI.cpp.obj
+
+GUI.i: GUI.cpp.i
+
+.PHONY : GUI.i
+
+# target to preprocess a source file
+GUI.cpp.i:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/GUI.cpp.i
+.PHONY : GUI.cpp.i
+
+GUI.s: GUI.cpp.s
+
+.PHONY : GUI.s
+
+# target to generate assembly for a file
+GUI.cpp.s:
+	cd /d C:\Users\MOMMES~1\OneDrive\FHKIEL~1\SS21\PIC\Labor\RESTAU~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/GUI.cpp.s
+.PHONY : GUI.cpp.s
+
 Kitchen.obj: Kitchen.cpp.obj
 
 .PHONY : Kitchen.obj
@@ -366,6 +439,10 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... RestLib
 	@echo ... AbstractDish.obj
@@ -380,6 +457,9 @@ help:
 	@echo ... DrinksBar.obj
 	@echo ... DrinksBar.i
 	@echo ... DrinksBar.s
+	@echo ... GUI.obj
+	@echo ... GUI.i
+	@echo ... GUI.s
 	@echo ... Kitchen.obj
 	@echo ... Kitchen.i
 	@echo ... Kitchen.s

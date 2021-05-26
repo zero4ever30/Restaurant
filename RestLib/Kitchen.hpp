@@ -18,7 +18,7 @@ namespace RestLib {
         enum class _DishType : int {
             PizzaMargherita, VegetableSoup
         };
-
+        const std::vector<std::string> AvailableDishes {"PizzaMargherita", "PizzaMargherita"};
         static RestLib::DishType CreatDish(_DishType const &dishType);
 
         Kitchen() = delete;

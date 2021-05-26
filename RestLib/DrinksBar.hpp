@@ -19,6 +19,7 @@ namespace RestLib {
         enum class DrinkType : int {
             Cola, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine
         };
+        const std::vector<std::string> AvailableDrinks {"Cola", "Cola Light", "Fanta", "Sprite", "Water", "Beer", "Sparkling water", "Red wine", "White wine"};
         static DishType OrderDrink(DrinkType const &drinkType);
 
         DrinksBar() = delete;
