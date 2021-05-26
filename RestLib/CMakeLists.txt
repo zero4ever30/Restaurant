@@ -10,4 +10,5 @@ add_library(RestLib ${SourceFiles} DrinksBar.cpp DrinksBar.hpp AbstractDish.cpp 
 set(FORT_ENABLE_TESTING OFF CACHE INTERNAL "")
 
 add_subdirectory(third-party/libfort)
+include_directories(third-party/libfort)
 target_link_libraries(RestLib PRIVATE fort)

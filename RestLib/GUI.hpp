@@ -5,7 +5,7 @@
 #ifndef MAIN_CPP_GUI_HPP
 #define MAIN_CPP_GUI_HPP
 
-#include "fort.hpp"
+#include "third-party\libfort\lib\fort.hpp"
 #include "Restaurant.hpp"
 #include "Customer.hpp"
 
