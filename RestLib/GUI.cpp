@@ -7,7 +7,7 @@ namespace RestLib
 {
 
     void MainMenu (){
-        std::system("cls");
+
         fort::char_table MainMenu;
         MainMenu.set_border_style(FT_DOUBLE2_STYLE);
         MainMenu << fort::header

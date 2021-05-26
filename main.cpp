@@ -17,14 +17,14 @@ using namespace std;
 using namespace RestLib;
 
 int main() {
-
+    /*
     Restaurant a ("Hello world" , "Database.txt");
 
     a.AddToCustomers(Customer("dhsajkda","asghdjkasd"));
 
     a.PrintOrderHistoryForAll();
     //std::system("cls");
-
+    */
     MainMenu();
 
     return 0;
