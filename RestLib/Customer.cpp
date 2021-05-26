@@ -18,12 +18,20 @@ namespace RestLib {
 
     void Customer::EatDish() {
         cout << this->getName() << " eats " << customerDish->GetDishName() << "." <<  endl;
-        this->customerHistory.push_back(customerDish->GetDishName());
+        this->customerOrderHistory.push_back(order("1.1.2000",customerDish->GetDishName()));        //// Date has to be changed
         customerDish = nullptr;
 
     }
 
     string Customer::getName() const {
         return customerLastName;
+    }
+
+    void Customer::printOrders() {
+        cout << "The costumer " << this->getName() << " has ordered  ";
+        for (auto order : customerOrderHistory)
+        {
+            cout << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
+        }
     }
 }

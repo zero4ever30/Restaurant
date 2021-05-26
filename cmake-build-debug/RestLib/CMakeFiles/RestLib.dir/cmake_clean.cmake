@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RestLib.dir/Kitchen.cpp.o"
   "CMakeFiles/RestLib.dir/Restaurant.cpp.o"
   "CMakeFiles/RestLib.dir/item.cpp.o"
+  "CMakeFiles/RestLib.dir/order.cpp.o"
   "libRestLib.a"
   "libRestLib.pdb"
 )

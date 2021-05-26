@@ -167,6 +167,19 @@ RestLib/CMakeFiles/RestLib.dir/item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/item.cpp.s"
 	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/item.cpp" -o CMakeFiles/RestLib.dir/item.cpp.s
 
+RestLib/CMakeFiles/RestLib.dir/order.cpp.o: RestLib/CMakeFiles/RestLib.dir/flags.make
+RestLib/CMakeFiles/RestLib.dir/order.cpp.o: ../RestLib/order.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object RestLib/CMakeFiles/RestLib.dir/order.cpp.o"
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RestLib.dir/order.cpp.o -c "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/order.cpp"
+
+RestLib/CMakeFiles/RestLib.dir/order.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RestLib.dir/order.cpp.i"
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/order.cpp" > CMakeFiles/RestLib.dir/order.cpp.i
+
+RestLib/CMakeFiles/RestLib.dir/order.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RestLib.dir/order.cpp.s"
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && /usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/order.cpp" -o CMakeFiles/RestLib.dir/order.cpp.s
+
 # Object files for target RestLib
 RestLib_OBJECTS = \
 "CMakeFiles/RestLib.dir/AbstractDish.cpp.o" \
@@ -175,7 +188,8 @@ RestLib_OBJECTS = \
 "CMakeFiles/RestLib.dir/DrinksBar.cpp.o" \
 "CMakeFiles/RestLib.dir/Kitchen.cpp.o" \
 "CMakeFiles/RestLib.dir/Restaurant.cpp.o" \
-"CMakeFiles/RestLib.dir/item.cpp.o"
+"CMakeFiles/RestLib.dir/item.cpp.o" \
+"CMakeFiles/RestLib.dir/order.cpp.o"
 
 # External object files for target RestLib
 RestLib_EXTERNAL_OBJECTS =
@@ -187,9 +201,10 @@ RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/DrinksBar.cpp.o
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Kitchen.cpp.o
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/Restaurant.cpp.o
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/item.cpp.o
+RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/order.cpp.o
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/build.make
 RestLib/libRestLib.a: RestLib/CMakeFiles/RestLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libRestLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libRestLib.a"
 	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && $(CMAKE_COMMAND) -P CMakeFiles/RestLib.dir/cmake_clean_target.cmake
 	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug/RestLib" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RestLib.dir/link.txt --verbose=$(VERBOSE)
 

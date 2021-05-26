@@ -10,6 +10,7 @@
 #include <memory>
 #include "AbstractDish.hpp"
 #include "vector"
+#include "order.hpp"
 //#include "Restaurant.hpp"
 
 using namespace std;
@@ -25,6 +26,7 @@ namespace RestLib {
         void ServeDish(DishType &_servedDish);
         void EatDish();
         string getName() const;
+        void printOrders ();
     protected:
 
     private:
@@ -32,10 +34,10 @@ namespace RestLib {
         string customerLastName {""};
         float customerToPay;
         DishType customerDish;
-        vector<string> customerHistory;
+        vector<order> customerOrderHistory;
 
 
-        //friend Customer& RestLib::Restaurant::FindCustomer(std::string _customerLastName);
+       friend class Restaurant;
     };
 }
 

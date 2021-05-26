@@ -333,6 +333,33 @@ item.cpp.s:
 	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f RestLib/CMakeFiles/RestLib.dir/build.make RestLib/CMakeFiles/RestLib.dir/item.cpp.s
 .PHONY : item.cpp.s
 
+order.o: order.cpp.o
+
+.PHONY : order.o
+
+# target to build an object file
+order.cpp.o:
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f RestLib/CMakeFiles/RestLib.dir/build.make RestLib/CMakeFiles/RestLib.dir/order.cpp.o
+.PHONY : order.cpp.o
+
+order.i: order.cpp.i
+
+.PHONY : order.i
+
+# target to preprocess a source file
+order.cpp.i:
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f RestLib/CMakeFiles/RestLib.dir/build.make RestLib/CMakeFiles/RestLib.dir/order.cpp.i
+.PHONY : order.cpp.i
+
+order.s: order.cpp.s
+
+.PHONY : order.s
+
+# target to generate assembly for a file
+order.cpp.s:
+	cd "/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f RestLib/CMakeFiles/RestLib.dir/build.make RestLib/CMakeFiles/RestLib.dir/order.cpp.s
+.PHONY : order.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -363,6 +390,9 @@ help:
 	@echo "... item.o"
 	@echo "... item.i"
 	@echo "... item.s"
+	@echo "... order.o"
+	@echo "... order.i"
+	@echo "... order.s"
 .PHONY : help
 
 

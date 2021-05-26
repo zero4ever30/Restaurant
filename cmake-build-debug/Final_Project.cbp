@@ -168,6 +168,12 @@
 		<Unit filename="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/item.hpp">
 			<Option target="RestLib"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/order.cpp">
+			<Option target="RestLib"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/RestLib/order.hpp">
+			<Option target="RestLib"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/main.cpp">
 			<Option target="Final_Project"/>
 		</Unit>
