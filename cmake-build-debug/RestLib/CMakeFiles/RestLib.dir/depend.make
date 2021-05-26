@@ -7,8 +7,6 @@ RestLib/CMakeFiles/RestLib.dir/AbstractDish.cpp.o: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/Customer.cpp.o: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/Customer.cpp.o: ../RestLib/Customer.cpp
 RestLib/CMakeFiles/RestLib.dir/Customer.cpp.o: ../RestLib/Customer.hpp
-RestLib/CMakeFiles/RestLib.dir/Customer.cpp.o: ../RestLib/Restaurant.hpp
-RestLib/CMakeFiles/RestLib.dir/Customer.cpp.o: ../RestLib/item.hpp
 
 RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.o: ../RestLib/AbstractDish.hpp
 RestLib/CMakeFiles/RestLib.dir/Dishes.cpp.o: ../RestLib/Dishes.cpp

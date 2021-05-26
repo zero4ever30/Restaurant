@@ -35,8 +35,17 @@ namespace RestLib
             if (_Customer.getName() == _customerLastName)
                 return _Customer;
             else
-                std::cerr << "User is not Fround" << std::endl;
-            return _Customer;                                         ////////Falsch
+            {std::cerr << "User is not Fround" << std::endl;
+                Customer a ("","");
+            return a;                           ////////Falsch
+            }
+        }
+    }
+
+    void Restaurant::Customer_List() {
+        for (auto const &_customer : vCustomers)
+        {
+            std::cout<<_customer.getName()<<std::endl;
         }
     }
 

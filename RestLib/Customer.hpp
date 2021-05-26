@@ -10,7 +10,7 @@
 #include <memory>
 #include "AbstractDish.hpp"
 #include "vector"
-#include "Restaurant.hpp"
+//#include "Restaurant.hpp"
 
 using namespace std;
 
@@ -35,7 +35,7 @@ namespace RestLib {
         vector<string> customerHistory;
 
 
-        friend Customer& RestLib::Restaurant::FindCustomer(std::string _customerLastName);
+        //friend Customer& RestLib::Restaurant::FindCustomer(std::string _customerLastName);
     };
 }
 

@@ -9,11 +9,17 @@
 #include <algorithm>
 #include "Customer.hpp"
 #include "Kitchen.hpp"
+#include "Restaurant.hpp"
 
 using namespace std;
 using namespace RestLib;
 
 int main() {
+
+    Restaurant a ("Hello world" , "Customers.txt");
+    a.Customer_List();
+
+/*
     // 8 Vektor mit Datentyp Gerichten
 
     vector<DishType> vDishes;
@@ -54,5 +60,7 @@ int main() {
     for(const auto &customer: vCustomer){
         customer->EatDish();
     }
+
+    */
     return 0;
 }

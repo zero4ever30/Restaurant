@@ -14,8 +14,11 @@ namespace RestLib
 
     public:
         explicit Restaurant(const std::string , const std::string);
-    protected:
+        void Customer_List ();
         Customer& FindCustomer (std::string);
+    protected:
+
+
     private:
         std::string Restaurant_name;
         std::vector<Customer> vCustomers;
