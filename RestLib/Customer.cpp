@@ -24,12 +24,13 @@ namespace RestLib {
     }
 
     string Customer::getName() const {
-        return customerLastName;
+        string name = customerName + ' ' + customerLastName;
+        return name;
     }
 
     void Customer::printOrders() {
         cout << "The costumer " << this->getName() << " has ordered  ";
-        for (auto order : customerOrderHistory)
+        for (auto &order : customerOrderHistory)
         {
             cout << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
         }

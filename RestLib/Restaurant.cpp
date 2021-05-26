@@ -4,6 +4,7 @@
 
 #include "Restaurant.hpp"
 #include <fstream>
+#include <iostream>
 namespace RestLib
 {
 
@@ -16,17 +17,25 @@ namespace RestLib
             Datai.open(FileName,std::ifstream::in);                        // open the file with the name (address) 'Filename'
             Datai.exceptions(std::ifstream::failbit | std::ifstream::badbit);        // possible exceptions
             while (!Datai.eof()&Datai.good()) {                           // as long as the file is open, readable and not finished keep reading
+
                 string tempV {};
                 string tempN {};
-                getline(Datai,tempV);
-                getline(Datai,tempN);
-
-                vCustomers.push_back(Customer(tempV, tempN));
+                getline(Datai,tempV,',');
+                getline(Datai,tempN, ';');
+                Customer tempCustomer(tempV, tempN);
+                while (Datai.peek() != '\n' && !Datai.eof())
+                {   order tempOrder("","");
+                    getline(Datai,tempOrder.orderdate,';');
+                    getline(Datai,tempOrder.ordername,';');
+                    tempCustomer.customerOrderHistory.push_back(std::move(tempOrder));
+                }
+                vCustomers.push_back(std::move(tempCustomer));
+                if (!Datai.eof() && Datai.peek()=='\n') Datai.ignore(1); // deletes the \n)
             }
             Datai.close();                                                // file must be closed again
-        } catch (const std::ifstream::failure &e) {                           // exception handling
+        } catch (const std::system_error& e) {                           // exception handling
             std::cerr << "Error File could not be Found. " << std::endl
-                      << "Please Enter a file name ending with .txt .. Exting with error # : " << e.what() << "\n" << std::flush;
+                      << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << std::flush;
         }
     }
 
@@ -47,6 +56,17 @@ namespace RestLib
         {
             std::cout<<_customer.getName()<<std::endl;
         }
+    }
+
+    void Restaurant::PrintOrderHistoryForAll() {
+        for ( RestLib::Customer &costumer : vCustomers)
+        {
+            costumer.printOrders();
+        }
+    }
+
+    void Restaurant::AddToCustomers(Customer & _newCustomer) {
+        vCustomers.push_back(std::move(_newCustomer));
     }
 
 

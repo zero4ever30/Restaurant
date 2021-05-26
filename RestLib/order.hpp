@@ -13,7 +13,7 @@ namespace RestLib
         order(std::string _orderdate, std::string _ordername);
         std::string getOrderName();
         std::string getOrderDate();
-    friend class Customer;
+    friend class Restaurant;
     private:
         std::string orderdate;
         std::string ordername;

@@ -16,10 +16,10 @@ using namespace RestLib;
 
 int main() {
 
-    Restaurant a ("Hello world" , "Customers.txt");
+    Restaurant a ("Hello world" , "Database.txt");
     a.Customer_List();
+    a.PrintOrderHistoryForAll();
 
-/*
     // 8 Vektor mit Datentyp Gerichten
 
     vector<DishType> vDishes;
@@ -61,6 +61,6 @@ int main() {
         customer->EatDish();
     }
 
-    */
+    a.PrintOrderHistoryForAll();
     return 0;
 }

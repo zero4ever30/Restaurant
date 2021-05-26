@@ -21,7 +21,7 @@ namespace RestLib {
     public:
         Customer() = delete;
         explicit Customer(const string  _customerName , const string _customerLastName);
-
+        friend class Restaurant;
     public:
         void ServeDish(DishType &_servedDish);
         void EatDish();
@@ -37,7 +37,7 @@ namespace RestLib {
         vector<order> customerOrderHistory;
 
 
-       friend class Restaurant;
+
     };
 }
 

@@ -16,6 +16,8 @@ namespace RestLib
         explicit Restaurant(const std::string , const std::string);
         void Customer_List ();
         Customer& FindCustomer (std::string);
+        void PrintOrderHistoryForAll();
+        void AddToCustomers(Customer &);
     protected:
 
 
