@@ -17,7 +17,8 @@ namespace RestLib
         void Customer_List ();
         Customer& FindCustomer (std::string);
         void PrintOrderHistoryForAll();
-        void AddToCustomers(Customer &);
+        void AddToCustomers(Customer _newCustomer);
+        friend class Customer;
     protected:
 
 
@@ -25,6 +26,8 @@ namespace RestLib
         std::string Restaurant_name;
         std::vector<Customer> vCustomers;
         std::vector<item> Stock;
+
+
     };
 
 }

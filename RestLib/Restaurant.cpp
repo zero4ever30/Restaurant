@@ -46,7 +46,7 @@ namespace RestLib
             else
             {std::cerr << "User is not Fround" << std::endl;
                 Customer a ("","");
-            return a;                           ////////Falsch
+                return a;                           ////////Falsch
             }
         }
     }
@@ -65,7 +65,7 @@ namespace RestLib
         }
     }
 
-    void Restaurant::AddToCustomers(Customer & _newCustomer) {
+    void Restaurant::AddToCustomers(Customer _newCustomer) {
         vCustomers.push_back(std::move(_newCustomer));
     }
 

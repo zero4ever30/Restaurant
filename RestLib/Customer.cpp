@@ -29,10 +29,13 @@ namespace RestLib {
     }
 
     void Customer::printOrders() {
-        cout << "The costumer " << this->getName() << " has ordered  ";
-        for (auto &order : customerOrderHistory)
-        {
-            cout << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
+        cout << "The costumer " << this->getName();
+        if (!this->customerOrderHistory.empty()) {
+            cout  << " has ordered  ";
+            for (auto &order : customerOrderHistory) {
+                cout << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
+            }
         }
+        else cout  << " has ordered nothing yet ";
     }
 }
