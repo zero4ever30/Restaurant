@@ -142,6 +142,19 @@ Final_Project/fast:
 .PHONY : Final_Project/fast
 
 #=============================================================================
+# Target rules for targets named Final_Project_autogen
+
+# Build rule for target.
+Final_Project_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Final_Project_autogen
+.PHONY : Final_Project_autogen
+
+# fast build rule for target.
+Final_Project_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project_autogen.dir\build.make CMakeFiles/Final_Project_autogen.dir/build
+.PHONY : Final_Project_autogen/fast
+
+#=============================================================================
 # Target rules for targets named RestLib
 
 # Build rule for target.
@@ -153,6 +166,33 @@ RestLib: cmake_check_build_system
 RestLib/fast:
 	$(MAKE) $(MAKESILENT) -f RestLib\CMakeFiles\RestLib.dir\build.make RestLib/CMakeFiles/RestLib.dir/build
 .PHONY : RestLib/fast
+
+Final_Project_autogen/mocs_compilation.obj: Final_Project_autogen/mocs_compilation.cpp.obj
+
+.PHONY : Final_Project_autogen/mocs_compilation.obj
+
+# target to build an object file
+Final_Project_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/Final_Project_autogen/mocs_compilation.cpp.obj
+.PHONY : Final_Project_autogen/mocs_compilation.cpp.obj
+
+Final_Project_autogen/mocs_compilation.i: Final_Project_autogen/mocs_compilation.cpp.i
+
+.PHONY : Final_Project_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Final_Project_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/Final_Project_autogen/mocs_compilation.cpp.i
+.PHONY : Final_Project_autogen/mocs_compilation.cpp.i
+
+Final_Project_autogen/mocs_compilation.s: Final_Project_autogen/mocs_compilation.cpp.s
+
+.PHONY : Final_Project_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Final_Project_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/Final_Project_autogen/mocs_compilation.cpp.s
+.PHONY : Final_Project_autogen/mocs_compilation.cpp.s
 
 RestLib/Restaurant.obj: RestLib/Restaurant.cpp.obj
 
@@ -208,6 +248,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+qtwin.obj: qtwin.cpp.obj
+
+.PHONY : qtwin.obj
+
+# target to build an object file
+qtwin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/qtwin.cpp.obj
+.PHONY : qtwin.cpp.obj
+
+qtwin.i: qtwin.cpp.i
+
+.PHONY : qtwin.i
+
+# target to preprocess a source file
+qtwin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/qtwin.cpp.i
+.PHONY : qtwin.cpp.i
+
+qtwin.s: qtwin.cpp.s
+
+.PHONY : qtwin.s
+
+# target to generate assembly for a file
+qtwin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Final_Project.dir\build.make CMakeFiles/Final_Project.dir/qtwin.cpp.s
+.PHONY : qtwin.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -216,14 +283,21 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Final_Project_autogen
 	@echo ... Final_Project
 	@echo ... RestLib
+	@echo ... Final_Project_autogen/mocs_compilation.obj
+	@echo ... Final_Project_autogen/mocs_compilation.i
+	@echo ... Final_Project_autogen/mocs_compilation.s
 	@echo ... RestLib/Restaurant.obj
 	@echo ... RestLib/Restaurant.i
 	@echo ... RestLib/Restaurant.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... qtwin.obj
+	@echo ... qtwin.i
+	@echo ... qtwin.s
 .PHONY : help
 
 

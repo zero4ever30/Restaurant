@@ -11,12 +11,16 @@
 #include "Kitchen.hpp"
 #include "Restaurant.hpp"
 #include <cstdlib>
+#include <QApplication>
+#include <QPushButton>
+#include "ui_QtWin.h"
+#include "qtwin.h"
 
 
 using namespace std;
 using namespace RestLib;
 
-int main() {
+int main(int argc , char *argv[]) {
 
     Restaurant a ("Hello world" , "Database.txt");
 
@@ -25,6 +29,10 @@ int main() {
     a.PrintOrderHistoryForAll();
     //std::system("cls");
 
+    QApplication b(argc, argv);
+    QtWin Win1;
+    Win1.show();
+    return QApplication::exec();
 
 
     return 0;
