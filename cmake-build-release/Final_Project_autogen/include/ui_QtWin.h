@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
 
@@ -21,6 +22,7 @@ class Ui_QtWin
 public:
     QTabWidget *tabOrder;
     QWidget *TabCH;
+    QPushButton *pushButton;
     QWidget *TabOrder;
 
     void setupUi(QWidget *QtWin)
@@ -30,15 +32,24 @@ public:
         QtWin->resize(897, 570);
         tabOrder = new QTabWidget(QtWin);
         tabOrder->setObjectName(QString::fromUtf8("tabOrder"));
-        tabOrder->setGeometry(QRect(0, 0, 901, 571));
+        tabOrder->setGeometry(QRect(0, 40, 901, 531));
+        tabOrder->setToolTipDuration(-10);
+        tabOrder->setLayoutDirection(Qt::LeftToRight);
+        tabOrder->setElideMode(Qt::ElideMiddle);
         TabCH = new QWidget();
         TabCH->setObjectName(QString::fromUtf8("TabCH"));
+        pushButton = new QPushButton(TabCH);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(670, 300, 80, 21));
+        pushButton->setContextMenuPolicy(Qt::NoContextMenu);
+        pushButton->setToolTipDuration(-4);
         tabOrder->addTab(TabCH, QString());
         TabOrder = new QWidget();
         TabOrder->setObjectName(QString::fromUtf8("TabOrder"));
         tabOrder->addTab(TabOrder, QString());
 
         retranslateUi(QtWin);
+        QObject::connect(pushButton, &QPushButton::clicked, QtWin, qOverload<>(&QWidget::close));
 
         tabOrder->setCurrentIndex(0);
 
@@ -52,8 +63,9 @@ public:
 #if QT_CONFIG(tooltip)
         tabOrder->setToolTip(QCoreApplication::translate("QtWin", "<html><head/><body><p><br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        tabOrder->setTabText(tabOrder->indexOf(TabCH), QCoreApplication::translate("QtWin", "Tab 1", nullptr));
-        tabOrder->setTabText(tabOrder->indexOf(TabOrder), QCoreApplication::translate("QtWin", "Tab 2", nullptr));
+        pushButton->setText(QCoreApplication::translate("QtWin", "PushButton", nullptr));
+        tabOrder->setTabText(tabOrder->indexOf(TabCH), QCoreApplication::translate("QtWin", "Order", nullptr));
+        tabOrder->setTabText(tabOrder->indexOf(TabOrder), QCoreApplication::translate("QtWin", "Customer History", nullptr));
     } // retranslateUi
 
 };

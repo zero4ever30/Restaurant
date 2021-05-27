@@ -1471,6 +1471,8 @@ QtCore/QVariant
 -
 QtWidgets/QApplication
 -
+QtWidgets/QPushButton
+-
 QtWidgets/QTabWidget
 -
 QtWidgets/QWidget

@@ -417,9 +417,12 @@ CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qwindowdefs.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qwindowdefs_win.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QApplication
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTabWidget
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QWidget
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qabstractbutton.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qapplication.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qsizepolicy.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qtabwidget.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qtwidgets-config.h
