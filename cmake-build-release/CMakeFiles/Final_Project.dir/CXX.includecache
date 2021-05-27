@@ -1224,6 +1224,18 @@ QtGui/qcolor.h
 QtGui/qbrush.h
 -
 
+C:/Qt/6.1.0/mingw81_64/include/QtGui/qpicture.h
+QtGui/qtguiglobal.h
+-
+QtCore/qiodevice.h
+-
+QtCore/qstringlist.h
+-
+QtCore/qsharedpointer.h
+-
+QtGui/qpaintdevice.h
+-
+
 C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixelformat.h
 QtGui/qtguiglobal.h
 -
@@ -1308,6 +1320,24 @@ QtGui/QTransform
 QtCore/qnamespace.h
 -
 
+C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextdocument.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtCore/qsize.h
+-
+QtCore/qrect.h
+-
+QtCore/qvariant.h
+-
+QtGui/qfont.h
+-
+QtCore/qurl.h
+-
+QtCore/qcontainerfwd.h
+-
+
 C:/Qt/6.1.0/mingw81_64/include/QtGui/qtgui-config.h
 
 C:/Qt/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h
@@ -1385,6 +1415,14 @@ C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qcombobox.h
 C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QHeaderView
 qheaderview.h
 C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qheaderview.h
+
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QLabel
+qlabel.h
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlabel.h
+
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QListWidget
+qlistwidget.h
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistwidget.h
 
 C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPushButton
 qpushbutton.h
@@ -1492,6 +1530,34 @@ C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qheaderview.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractitemview.h
+-
+
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlabel.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
+-
+QtGui/qpicture.h
+-
+QtGui/qtextdocument.h
+-
+
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistview.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractitemview.h
+-
+
+C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistwidget.h
+QtWidgets/qlistview.h
+-
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qlist.h
+-
+QtCore/qitemselectionmodel.h
+-
+QtCore/qvariant.h
 -
 
 C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qpushbutton.h
@@ -1678,6 +1744,10 @@ QtWidgets/QApplication
 QtWidgets/QComboBox
 -
 QtWidgets/QHeaderView
+-
+QtWidgets/QLabel
+-
+QtWidgets/QListWidget
 -
 QtWidgets/QPushButton
 -

@@ -260,6 +260,7 @@ CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qkeysequence.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpaintdevice.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpalette.h
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpicture.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixelformat.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixmap.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpointingdevice.h
@@ -268,6 +269,7 @@ CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgb.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgba64.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qscreen.h
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextdocument.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtgui-config.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtransform.h
@@ -279,6 +281,8 @@ CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QApplication
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QComboBox
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QHeaderView
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QLabel
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QListWidget
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTabWidget
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTableWidget
@@ -293,6 +297,9 @@ CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidg
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qcombobox.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qframe.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qheaderview.h
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlabel.h
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistview.h
+CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistwidget.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qrubberband.h
 CMakeFiles/Final_Project.dir/main.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qsizepolicy.h
@@ -426,6 +433,7 @@ CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qkeysequence.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpaintdevice.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpalette.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpicture.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixelformat.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpixmap.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qpointingdevice.h
@@ -434,6 +442,7 @@ CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgb.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qrgba64.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qscreen.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtextdocument.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtgui-config.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtguiglobal.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui/qtransform.h
@@ -445,6 +454,8 @@ CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtGui
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QApplication
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QComboBox
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QHeaderView
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QLabel
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QListWidget
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QPushButton
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTabWidget
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/QTableWidget
@@ -459,6 +470,9 @@ CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWid
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qcombobox.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qframe.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qheaderview.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlabel.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistview.h
+CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qlistwidget.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qpushbutton.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qrubberband.h
 CMakeFiles/Final_Project.dir/qtwin.cpp.obj: C:/Qt/6.1.0/mingw81_64/include/QtWidgets/qsizepolicy.h
