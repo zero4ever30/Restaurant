@@ -55,11 +55,13 @@
      </property>
     </widget>
    </widget>
+   
+   <!-- ORDER_TAB_START-->
    <widget class="QWidget" name="TabOrder">
     <attribute name="title">
      <string>Order</string>
     </attribute>
-    <widget class="QListWidget" name="listWidget">
+    <widget class="QListWidget" name="dishList">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -69,7 +71,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QListWidget" name="listWidget_2">
+    <widget class="QListWidget" name="drinkList">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -79,7 +81,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="OrderButton">
+    <widget class="QPushButton" name="orderButton">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -92,7 +94,7 @@
       <string>Order</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_2">
+    <widget class="QComboBox" name="customerComboBox">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -102,7 +104,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="drinkLabel">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -112,10 +114,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>Getränke</string>
+      <string>Drinks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="dishLabel">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -125,10 +127,12 @@
       </rect>
      </property>
      <property name="text">
-      <string>Speisen</string>
+      <string>Dishes</string>
      </property>
     </widget>
-   </widget>
+   </widget>   
+   <!-- ORDER_TAB_END-->
+   
    <widget class="QWidget" name="TabCH">
     <attribute name="title">
      <string>Customer History</string>

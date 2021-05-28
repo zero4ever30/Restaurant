@@ -5,6 +5,7 @@
 #ifndef MAIN_CPP_ORDER_HPP
 #define MAIN_CPP_ORDER_HPP
 #include <string>
+
 namespace RestLib
 {
     class order {
@@ -13,7 +14,10 @@ namespace RestLib
         order(std::string _orderdate, std::string _ordername);
         std::string getOrderName();
         std::string getOrderDate();
-    friend class Restaurant;
+
+        friend class Restaurant;
+
+        static void createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName);
     private:
         std::string orderdate;
         std::string ordername;

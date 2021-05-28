@@ -20,6 +20,17 @@ public:
 
     ~QtWin() override;
 
+    enum tabNames {
+        TABRESTAURANT,
+        TABORDER,
+        TABCH
+    };
+
+    void updateOrderTab();
+private slots:
+    void on_tabOrder_currentChanged(int index);
+    void on_orderButton_clicked();
+
 private:
     Ui::QtWin *ui;
 };
