@@ -5,6 +5,9 @@
 #include "Restaurant.hpp"
 #include <fstream>
 #include <iostream>
+#include <ctime>
+#include <sstream>
+
 namespace RestLib
 {
 
@@ -69,5 +72,34 @@ namespace RestLib
         vCustomers.push_back(std::move(_newCustomer));
     }
 
+    void Restaurant::createNewOrder(const string &customerName, const string &dishName, const std::string& drinkName) {
+        for (Customer& _customer : this->vCustomers) {
+            if (_customer.getName() == customerName) {
+                // Get current date
+                time_t t = time(0);
+                tm* now = localtime(&t);
+                ostringstream stringStream;
+                stringStream << now->tm_mday << "." << (now->tm_mon + 1) << "." << (now->tm_year + 1900);
+                string orderDate = stringStream.str();
+
+                // Create new dish order
+                if ("No Dish" != dishName) {
+                    order newDish(orderDate, dishName);
+                    cout << "Customer: " << customerName << " ordered Dish: " << newDish.getOrderName() << " [" << newDish.getOrderDate() << "]" << endl;
+
+                    //_customer.ServeDish();
+                    _customer.customerOrderHistory.push_back(newDish);
+                }
+                // Create new drink order
+                if ("No Drink" != drinkName) {
+                    order newDrink(orderDate, drinkName);
+                    cout << "Customer: " << customerName << " ordered Drink: " << newDrink.getOrderName() << " [" << newDrink.getOrderDate() << "]" << endl;
+                    _customer.customerOrderHistory.push_back(newDrink);
+                }
+                break;
+            }
+        }
+
+    }
 
 }

@@ -6,6 +6,7 @@
 #define MAIN_CPP_QTWIN_H
 
 #include <QWidget>
+#include "Restaurant.hpp"
 
 
 QT_BEGIN_NAMESPACE
@@ -27,12 +28,14 @@ public:
     };
 
     void updateOrderTab();
+
 private slots:
     void on_tabOrder_currentChanged(int index);
     void on_orderButton_clicked();
 
 private:
     Ui::QtWin *ui;
+    RestLib::Restaurant restaurant{"Hello world" , "Database.txt"};
 };
 
 

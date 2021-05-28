@@ -22,11 +22,7 @@ using namespace RestLib;
 
 int main(int argc , char *argv[]) {
 
-    Restaurant a ("Hello world" , "Database.txt");
 
-    a.AddToCustomers(Customer("dhsajkda","asghdjkasd"));
-
-    a.PrintOrderHistoryForAll();
     //std::system("cls");
 
     QApplication b(argc, argv);

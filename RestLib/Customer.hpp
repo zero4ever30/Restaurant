@@ -24,6 +24,7 @@ namespace RestLib {
         friend class Restaurant;
     public:
         void ServeDish(DishType &_servedDish);
+        void ServeDrink(DishType &_servedDish);
         void EatDish();
         string getName() const;
         void printOrders ();
@@ -34,6 +35,7 @@ namespace RestLib {
         string customerLastName {""};
         float customerToPay;
         DishType customerDish;
+        DishType customerDrink;
         vector<order> customerOrderHistory;
 
 

@@ -7,6 +7,7 @@
 #include <vector>
 #include "Customer.hpp"
 #include "item.hpp"
+//#include "../qtwin.h"
 
 namespace RestLib
 {
@@ -19,12 +20,17 @@ namespace RestLib
         void PrintOrderHistoryForAll();
         void AddToCustomers(Customer _newCustomer);
         friend class Customer;
+        friend class QtWin;
+
+        std::vector<Customer> vCustomers;
+
+
+        void createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName);
     protected:
 
 
     private:
         std::string Restaurant_name;
-        std::vector<Customer> vCustomers;
         std::vector<item> Stock;
 
 
