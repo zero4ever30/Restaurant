@@ -13,7 +13,11 @@ namespace RestLib {
     void Customer::ServeDish(DishType &_servedDish) {
         customerDish = move(_servedDish);
         cout << "The " << customerDish->GetDishName() << " for " << this->getName() << endl;
+    }
 
+    void Customer::ServeDrink(DishType &_servedDish) {
+        customerDrink = move(_servedDish);
+        cout << "The " << customerDish->GetDishName() << " for " << this->getName() << endl;
     }
 
     void Customer::EatDish() {
@@ -31,11 +35,11 @@ namespace RestLib {
     void Customer::printOrders() {
         cout << "The costumer " << this->getName();
         if (!this->customerOrderHistory.empty()) {
-            cout  << " has ordered  ";
+            cout  << " has ordered  " << endl;
             for (auto &order : customerOrderHistory) {
-                cout << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
+                cout << "    " << order.getOrderName() << " on the " << order.getOrderDate() << std::endl;
             }
         }
-        else cout  << " has ordered nothing yet ";
+        else cout  << " has ordered nothing yet " << endl;
     }
 }

@@ -9,12 +9,16 @@
 #include "qtwin.h"
 #include "ui_QtWin.h"
 #include "order.hpp"
+#include "Restaurant.hpp"
+#include "Customer.hpp"
 
 using namespace std;
 
 QtWin::QtWin(QWidget *parent) :
         QWidget(parent), ui(new Ui::QtWin) {
     ui->setupUi(this);
+
+    restaurant.PrintOrderHistoryForAll();
 }
 
 QtWin::~QtWin() {
@@ -40,7 +44,7 @@ void QtWin::on_orderButton_clicked()
     std::string selectedDish {ui->dishList->currentItem()->text().toStdString()};
     std::string selectedDrink {ui->drinkList->currentItem()->text().toStdString()};
 
-    RestLib::order::createNewOrder(selectedCustomer, selectedDish, selectedDrink);
+    restaurant.createNewOrder(selectedCustomer, selectedDish, selectedDrink);
 
     updateOrderTab();
 }
@@ -67,8 +71,11 @@ void QtWin::updateOrderTab() {
     ui->drinkList->setCurrentRow(0);
 
     // Get active customers and add them
-    ui->customerComboBox->addItem("Max Mustermann");
-    ui->customerComboBox->addItem("Sabine Mustermann");
+    for (RestLib::Customer& _customer : restaurant.vCustomers) {
+        ui->customerComboBox->addItem(QString::fromStdString(_customer.getName()));
 
+        cout << "ODERS: " << endl;
+        _customer.printOrders();
+    }
     QWidget::update();
 }
