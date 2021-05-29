@@ -8,6 +8,7 @@
 
 #include <memory>
 #include "AbstractDish.hpp"
+#include "string"
 namespace RestLib {
 
 
@@ -15,11 +16,11 @@ namespace RestLib {
 
 
     public :
-        enum class _DishType : int {
-            PizzaMargherita, VegetableSoup
+        enum  _DishType : int {
+            PizzaMargherita = 0, VegetableSoup = 1
         };
-
-        static RestLib::DishType CreatDish(_DishType const &dishType);
+        static inline std::vector<std::string> availableDishes {"Pizza Margherita" , "Vegetable Soup"};
+        static RestLib::DishType CreatDish(_DishType const dishType);
 
         Kitchen() = delete;
         ~Kitchen() = delete;

@@ -15,15 +15,21 @@ namespace RestLib {
         cout << "The " << customerDish->GetDishName() << " for " << this->getName() << endl;
     }
 
-    void Customer::ServeDrink(DishType &_servedDish) {
-        customerDrink = move(_servedDish);
-        cout << "The " << customerDish->GetDishName() << " for " << this->getName() << endl;
+    void Customer::ServeDrink(DrinkType &_servedDrink) {
+        customerDrink = move(_servedDrink);
+        cout << "The " << customerDrink->getDrinkName() << " for " << this->getName() << endl;
     }
 
     void Customer::EatDish() {
         cout << this->getName() << " eats " << customerDish->GetDishName() << "." <<  endl;
-        this->customerOrderHistory.push_back(order("1.1.2000",customerDish->GetDishName()));        //// Date has to be changed
+        //this->customerOrderHistory.push_back(order("1.1.2000",customerDish->GetDishName()));        //// Date has to be changed
         customerDish = nullptr;
+
+    }
+    void Customer::DrinkDrink() {
+        cout << this->getName() << " drinks " << customerDrink->getDrinkName() << "." <<  endl;
+        //this->customerOrderHistory.push_back(order("1.1.2000",customerDish->GetDishName()));        //// Date has to be changed
+        customerDrink = nullptr;
 
     }
 
@@ -41,5 +47,13 @@ namespace RestLib {
             }
         }
         else cout  << " has ordered nothing yet " << endl;
+    }
+
+    int Customer::getNumberOfOrdersFromHistory() {
+        return this->customerOrderHistory.size();
+    }
+
+    vector<order> Customer::getcustomerOrderHistory() {
+        return customerOrderHistory;
     }
 }

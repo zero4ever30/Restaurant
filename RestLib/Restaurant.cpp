@@ -72,7 +72,7 @@ namespace RestLib
         vCustomers.push_back(std::move(_newCustomer));
     }
 
-    void Restaurant::createNewOrder(const string &customerName, const string &dishName, const std::string& drinkName) {
+    void Restaurant::createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName , const int dishIndex , const int drinkIndex) {
         for (Customer& _customer : this->vCustomers) {
             if (_customer.getName() == customerName) {
                 // Get current date
@@ -84,6 +84,9 @@ namespace RestLib
 
                 // Create new dish order
                 if ("No Dish" != dishName) {
+                    DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex);
+                    _customer.ServeDish(dish);
+                    _customer.EatDish();
                     order newDish(orderDate, dishName);
                     cout << "Customer: " << customerName << " ordered Dish: " << newDish.getOrderName() << " [" << newDish.getOrderDate() << "]" << endl;
 
@@ -92,6 +95,9 @@ namespace RestLib
                 }
                 // Create new drink order
                 if ("No Drink" != drinkName) {
+                    DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
+                    _customer.ServeDrink(drink);
+                    _customer.DrinkDrink();
                     order newDrink(orderDate, drinkName);
                     cout << "Customer: " << customerName << " ordered Drink: " << newDrink.getOrderName() << " [" << newDrink.getOrderDate() << "]" << endl;
                     _customer.customerOrderHistory.push_back(newDrink);

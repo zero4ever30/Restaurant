@@ -32,7 +32,7 @@
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <property name="elideMode">
     <enum>Qt::ElideMiddle</enum>
@@ -55,8 +55,6 @@
      </property>
     </widget>
    </widget>
-   
-   <!-- ORDER_TAB_START-->
    <widget class="QWidget" name="TabOrder">
     <attribute name="title">
      <string>Order</string>
@@ -94,16 +92,6 @@
       <string>Order</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="customerComboBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>531</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLabel" name="drinkLabel">
      <property name="geometry">
       <rect>
@@ -130,14 +118,12 @@
       <string>Dishes</string>
      </property>
     </widget>
-   </widget>   
-   <!-- ORDER_TAB_END-->
-   
+   </widget>
    <widget class="QWidget" name="TabCH">
     <attribute name="title">
      <string>Customer History</string>
     </attribute>
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="CHTable">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -145,22 +131,6 @@
        <width>331</width>
        <height>241</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>360</x>
-       <y>90</y>
-       <width>161</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="toolTipDuration">
-      <number>-2</number>
-     </property>
-     <property name="placeholderText">
-      <string>Max Mustermann</string>
      </property>
     </widget>
    </widget>
@@ -198,6 +168,19 @@
    </property>
    <property name="text">
     <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="SelectedCustomerComboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>561</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Select a customer</string>
    </property>
   </widget>
  </widget>

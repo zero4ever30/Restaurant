@@ -28,14 +28,18 @@ public:
     };
 
     void updateOrderTab();
-
+    void updateCostumerHistoryTab();
 private slots:
     void on_tabOrder_currentChanged(int index);
     void on_orderButton_clicked();
+    void on_SelectedCustomerComboBox_currentIndexChanged();
 
 private:
     Ui::QtWin *ui;
     RestLib::Restaurant restaurant{"Hello world" , "Database.txt"};
+
+
+    void updateSelectedCustomerComboBox();
 };
 
 

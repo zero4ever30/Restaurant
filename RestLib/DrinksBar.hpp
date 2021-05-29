@@ -10,17 +10,23 @@
 #include <string>
 #include <vector>
 #include <memory>
-#include "AbstractDish.hpp"
+#include "Drink.hpp"
+#include "order.hpp"
+#include "MixedDrink.hpp"
 
 namespace RestLib {
 
+    using  DrinkType = std::unique_ptr<Drink>;
+
     class DrinksBar {
     public:
-        enum class DrinkType : int {
-            Cola, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine
+        enum _DrinkType : int {
+            Cola = 0, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine, Banana , Weizenbier, Rum , Redbull
         };
-        static DishType OrderDrink(DrinkType const &drinkType);
-
+        static inline std::vector<std::string> availableDrinks  {"Cola", "Cola Light", "Fanta", "Sprite", "Water", "Beer", "Sparkling water",
+                                                  "Redwine", "Whitewine", "Banana", "Weizenbier", "Rum" , "Redbull"};
+        static DrinkType PrepareDrink(_DrinkType const &drinkType);
+        static DrinkType Mix(_DrinkType const &drinkType1 , _DrinkType const &drinkType2);
         DrinksBar() = delete;
         ~DrinksBar() = delete;
     protected:

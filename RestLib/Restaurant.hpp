@@ -7,6 +7,8 @@
 #include <vector>
 #include "Customer.hpp"
 #include "item.hpp"
+#include "Kitchen.hpp"
+#include "DrinksBar.hpp"
 //#include "../qtwin.h"
 
 namespace RestLib
@@ -25,7 +27,7 @@ namespace RestLib
         std::vector<Customer> vCustomers;
 
 
-        void createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName);
+        void createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName , const int dishIndex , const int drinkIndex);
     protected:
 
 

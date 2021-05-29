@@ -11,6 +11,7 @@
 #include "AbstractDish.hpp"
 #include "vector"
 #include "order.hpp"
+#include "Drink.hpp"
 //#include "Restaurant.hpp"
 
 using namespace std;
@@ -24,10 +25,13 @@ namespace RestLib {
         friend class Restaurant;
     public:
         void ServeDish(DishType &_servedDish);
-        void ServeDrink(DishType &_servedDish);
+        void ServeDrink(DrinkType &_servedDrink);
         void EatDish();
+        void DrinkDrink();
         string getName() const;
         void printOrders ();
+        int getNumberOfOrdersFromHistory();
+        vector<order> getcustomerOrderHistory();
     protected:
 
     private:
@@ -35,7 +39,7 @@ namespace RestLib {
         string customerLastName {""};
         float customerToPay;
         DishType customerDish;
-        DishType customerDrink;
+        DrinkType customerDrink;
         vector<order> customerOrderHistory;
 
 
