@@ -29,21 +29,19 @@ namespace RestLib {
         void EatDish();
         void DrinkDrink();
         string getName() const;
+        string getSaveName() const;
         void printOrders ();
         int getNumberOfOrdersFromHistory();
         vector<order> getcustomerOrderHistory();
     protected:
 
     private:
-        string customerName {""};
-        string customerLastName {""};
+        string customerName;
+        string customerLastName;
         float customerToPay;
         DishType customerDish;
         DrinkType customerDrink;
         vector<order> customerOrderHistory;
-
-
-
     };
 }
 

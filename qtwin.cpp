@@ -40,12 +40,17 @@ void QtWin::on_tabOrder_currentChanged(int index)
     }
 }
 
+//SaveButton
+void QtWin::on_pushButton_save_clicked() {
+    restaurant.SaveHistory();
+}
+
 // OrderTab
 void QtWin::on_orderButton_clicked()
 {
-    std::string selectedCustomer {ui->SelectedCustomerComboBox->currentText().toStdString()};
-    std::string selectedDish {ui->dishList->currentItem()->text().toStdString()};
-    std::string selectedDrink {ui->drinkList->currentItem()->text().toStdString()};
+    string selectedCustomer {ui->SelectedCustomerComboBox->currentText().toStdString()};
+    string selectedDish {ui->dishList->currentItem()->text().toStdString()};
+    string selectedDrink {ui->drinkList->currentItem()->text().toStdString()};
     int selectedDishIndex {ui->dishList->currentRow()-1};
     int selectedDrinkIndex {ui->drinkList->currentRow()-1};
     restaurant.createNewOrder(selectedCustomer, selectedDish, selectedDrink,selectedDishIndex,selectedDrinkIndex);
@@ -65,11 +70,11 @@ void QtWin::updateOrderTab() {
     ui->drinkList->addItem("No Drink");
 
     // Add avaiable drinks and dishes
-    for (auto dish : RestLib::Kitchen::availableDishes)
+    for (const auto& dish : RestLib::Kitchen::availableDishes)
     {
         ui->dishList->addItem(QString::fromStdString(dish));
     }
-    for (auto drink : RestLib::DrinksBar::availableDrinks)
+    for (const auto& drink : RestLib::DrinksBar::availableDrinks)
     {
         ui->drinkList->addItem(QString::fromStdString(drink));
     }
@@ -77,10 +82,6 @@ void QtWin::updateOrderTab() {
     // Select each first empty lines
     ui->dishList->setCurrentRow(0);
     ui->drinkList->setCurrentRow(0);
-
-
-       // cout << "ODERS: " << endl;
-       // _customer.printOrders();
 
     QWidget::update();
 }

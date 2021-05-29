@@ -32,6 +32,7 @@ public:
 private slots:
     void on_tabOrder_currentChanged(int index);
     void on_orderButton_clicked();
+    void on_pushButton_save_clicked();
     void on_SelectedCustomerComboBox_currentIndexChanged();
 
 private:

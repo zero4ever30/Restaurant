@@ -16,13 +16,16 @@ namespace RestLib
     class Restaurant {
 
     public:
-        explicit Restaurant(const std::string , const std::string);
+        explicit Restaurant(const std::string& restaurantName, const std::string& _filename);
+
         void Customer_List ();
         Customer& FindCustomer (std::string);
         void PrintOrderHistoryForAll();
         void AddToCustomers(Customer _newCustomer);
+
+        void SaveHistory();
+
         friend class Customer;
-        friend class QtWin;
 
         std::vector<Customer> vCustomers;
 
@@ -34,7 +37,7 @@ namespace RestLib
     private:
         std::string Restaurant_name;
         std::vector<item> Stock;
-
+        std::string filename;
 
     };
 
