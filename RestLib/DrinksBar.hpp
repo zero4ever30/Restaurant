@@ -26,12 +26,14 @@ namespace RestLib {
         static inline std::vector<std::string> availableDrinks  {"Cola", "Cola Light", "Fanta", "Sprite", "Water", "Beer", "Sparkling water",
                                                   "Redwine", "Whitewine", "Banana", "Weizenbier", "Rum" , "Redbull"};
         static DrinkType PrepareDrink(_DrinkType const &drinkType);
-        static DrinkType Mix(_DrinkType const &drinkType1 , _DrinkType const &drinkType2);
+        static DrinkType PrepareDrink(const _DrinkType &drinkType1, const _DrinkType &drinkType2);
+        //static DrinkType Mix(_DrinkType const &drinkType1 , _DrinkType const &drinkType2);
         DrinksBar() = delete;
         ~DrinksBar() = delete;
     protected:
 
     private:
+
 
     };
 }

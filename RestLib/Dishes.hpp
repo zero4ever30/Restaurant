@@ -19,7 +19,7 @@ namespace RestLib {
     protected:
 
     private:
-        std::vector<std::string> vIngredients {"Pizza Dough", "Tomato Sauce", "Mozzarella", "Basil", "Cheese"};
+        //std::vector<std::string> vIngredients {};//{"Pizza Dough", "Tomato Sauce", "Mozzarella", "Basil", "Cheese"};
     };
 
 
@@ -32,7 +32,7 @@ namespace RestLib {
     protected:
 
     private:
-        std::vector<std::string> vIngredients {"Onions", "Carrots", "Mushrooms", "Water", "Broth", "Processed Cheese"};
+        //std::vector<std::string> vIngredients {};//{"Onions", "Carrots", "Mushrooms", "Water", "Broth", "Processed Cheese"};
     };
 
 }

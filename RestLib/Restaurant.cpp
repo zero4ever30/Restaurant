@@ -99,7 +99,9 @@ namespace RestLib
         vCustomers.push_back(move(_newCustomer));
     }
 
-    void Restaurant::createNewOrder(const string& customerName, const string& dishName, const string& drinkName , const int dishIndex , const int drinkIndex) {
+    void Restaurant::createNewOrder(const string& customerName, const string& dishName,
+                                    const string& drinkName , const int dishIndex , const int drinkIndex , const std::vector<std::string> recipe,
+                                    const string& selectedMix , const int selectedMixIndex) {
         for (Customer& _customer : this->vCustomers) {
             if (_customer.getName() == customerName) {
                 // Get current date
@@ -111,7 +113,7 @@ namespace RestLib
 
                 // Create new dish order
                 if ("No Dish" != dishName) {
-                    DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex);
+                    DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , recipe);
                     _customer.ServeDish(dish);
                     _customer.EatDish();
                     order newDish(orderDate, dishName);
@@ -121,9 +123,15 @@ namespace RestLib
                     _customer.customerOrderHistory.push_back(newDish);
                 }
                 // Create new drink order
-                if ("No Drink" != drinkName) {
-                    DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
-                    _customer.ServeDrink(drink);
+                if ("No Drink" != drinkName && "Don't mix"!= selectedMix) {
+                    if ("Don't mix"!= selectedMix){
+                        DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
+                        _customer.ServeDrink(drink);
+                    }
+                    else{
+                        DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
+                        _customer.ServeDrink(drink);
+                    }
                     _customer.DrinkDrink();
                     order newDrink(orderDate, drinkName);
                     cout << "Customer: " << customerName << " ordered Drink: " << newDrink.getOrderName() << " [" << newDrink.getOrderDate() << "]" << endl;

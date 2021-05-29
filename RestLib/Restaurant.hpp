@@ -30,7 +30,9 @@ namespace RestLib
         std::vector<Customer> vCustomers;
 
 
-        void createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName , const int dishIndex , const int drinkIndex);
+        void createNewOrder(const string& customerName, const string& dishName,
+                            const string& drinkName , const int dishIndex , const int drinkIndex , const std::vector<std::string> recipe,
+                            const string& selectedMix , const int selectedMixIndex);
     protected:
 
 

@@ -6,11 +6,13 @@
 
 #include <iostream>
 #include <string>
+#include <QMessageBox>
 #include "qtwin.h"
 #include "ui_QtWin.h"
 #include "order.hpp"
 #include "Restaurant.hpp"
 #include "Customer.hpp"
+#include <vector>
 
 using namespace std;
 
@@ -48,26 +50,47 @@ void QtWin::on_pushButton_save_clicked() {
 // OrderTab
 void QtWin::on_orderButton_clicked()
 {
-    string selectedCustomer {ui->SelectedCustomerComboBox->currentText().toStdString()};
-    string selectedDish {ui->dishList->currentItem()->text().toStdString()};
-    string selectedDrink {ui->drinkList->currentItem()->text().toStdString()};
-    int selectedDishIndex {ui->dishList->currentRow()-1};
-    int selectedDrinkIndex {ui->drinkList->currentRow()-1};
-    restaurant.createNewOrder(selectedCustomer, selectedDish, selectedDrink,selectedDishIndex,selectedDrinkIndex);
+    if (ui->SelectedCustomerComboBox->currentIndex() != -1){
+        if (ui->dishList->currentRow() == 0 && ui->drinkList->currentRow()== 0)
+            QMessageBox::warning(this , "Warning!!" , "No dish or drink has been chosen!\nNo order has been made!");
+        else {
+            string selectedCustomer{ui->SelectedCustomerComboBox->currentText().toStdString()};
+            string selectedDish{ui->dishList->currentItem()->text().toStdString()};
+            string selectedDrink{ui->drinkList->currentItem()->text().toStdString()};
+            string selectedMix{ui->mixDrinksList->currentItem()->text().toStdString()};
+            int selectedDishIndex{ui->dishList->currentRow() - 1};
+            int selectedDrinkIndex{ui->drinkList->currentRow() - 1};
+            int selectedMixIndex{ui->mixDrinksList->currentRow() - 1};
+            //ui->SelectedCustomerComboBox->currentIndex()
 
-    updateOrderTab();
+            std::vector<std::string> Recipe;
+            for (auto i{1}; i < ui->ingredientsList->count(); i++) {
+                Recipe.push_back(ui->ingredientsList->item(i)->text().toStdString());
+            }
+            restaurant.createNewOrder(selectedCustomer, selectedDish, selectedDrink, selectedDishIndex,
+                                      selectedDrinkIndex, Recipe, selectedMix, selectedMixIndex);
+            updateOrderTab();
+        }
+    }
+    else{
+        QMessageBox::critical(this , "Error!!" , "The customer must be selected before hand");
+    }
+
+
 }
 
 //Update the OrderTab
 void QtWin::updateOrderTab() {
     // Clear all widgets
-
     ui->dishList->clear();
     ui->drinkList->clear();
+    ui->ingredientsList -> clear();
+    ui->mixDrinksList->clear();
 
     // Add empty dishes and drinks
     ui->dishList->addItem("No Dish");
     ui->drinkList->addItem("No Drink");
+    ui->mixDrinksList->addItem("Don't mix");
 
     // Add avaiable drinks and dishes
     for (const auto& dish : RestLib::Kitchen::availableDishes)
@@ -78,10 +101,15 @@ void QtWin::updateOrderTab() {
     {
         ui->drinkList->addItem(QString::fromStdString(drink));
     }
+    for (const auto& drink : RestLib::DrinksBar::availableDrinks)
+    {
+        ui->mixDrinksList->addItem(QString::fromStdString(drink));
+    }
 
     // Select each first empty lines
     ui->dishList->setCurrentRow(0);
     ui->drinkList->setCurrentRow(0);
+    ui->mixDrinksList->setCurrentRow(0);
 
     QWidget::update();
 }
@@ -131,4 +159,83 @@ void QtWin::updateSelectedCustomerComboBox(){
 
 void QtWin::on_SelectedCustomerComboBox_currentIndexChanged() {
     updateCostumerHistoryTab();
+}
+
+void QtWin::on_dishList_clicked(){
+
+    ui->ingredientsList->clear();
+    // get ingredients
+
+    if(ui->ingredientsList->currentRow()!=0){
+        ui->ingredientsList->addItem("Default");
+        for (const auto& item : RestLib::Kitchen::Recipes[ui->dishList->currentRow()-1])
+        {
+            ui->ingredientsList->addItem(QString::fromStdString(item));
+        }
+    }
+
+}
+void QtWin::on_ingredientsList_clicked(){
+
+    if (ui->ingredientsList->currentRow() == 0){
+        on_dishList_clicked();
+    }
+    else
+    {
+        ui->ingredientsList->takeItem(ui->ingredientsList->currentRow());
+    }
+}
+void QtWin::on_addIngredientText_returnPressed(){
+    ui->ingredientsList->addItem(ui->addIngredientText->text());
+    ui->addIngredientText->clear();
+}
+
+void QtWin::on_lastNameText_returnPressed() {
+    QMessageBox msgBox(QMessageBox::Warning , "Warning!" , "");
+    msgBox.setText("Are you sure you want to add a new customer?");
+    msgBox.setInformativeText("Please double check the given data.");
+    QPushButton *connectButton = msgBox.addButton(tr("Add"), QMessageBox::YesRole);
+    QPushButton *abortButton = msgBox.addButton(QMessageBox::Abort);
+
+    msgBox.exec();
+
+    if (msgBox.clickedButton() == connectButton) {
+
+        restaurant.AddToCustomers(RestLib::Customer(
+                ui->firstNameText->text().toStdString(),
+                ui->lastNameText->text().toStdString()));
+        ui->firstNameText->clear();
+        ui->lastNameText->clear();
+        updateSelectedCustomerComboBox();
+        ui->SelectedCustomerComboBox->setCurrentIndex(ui->SelectedCustomerComboBox->count()-1);
+    } else if (msgBox.clickedButton() == abortButton) {
+        // abort
+    }
+
+
+}
+
+void QtWin::on_deleteCustomerButton_clicked() {
+
+    QMessageBox msgBox(QMessageBox::Warning , "Warning!" , "");
+    msgBox.setText("Are you sure you want to remove the following customer?");
+    msgBox.setInformativeText("<FONT COLOR='#ff0000'>" + ui->SelectedCustomerComboBox->currentText() + "</FONT>");
+    QPushButton *connectButton = msgBox.addButton(tr("REMOVE"), QMessageBox::YesRole);
+    QPushButton *abortButton = msgBox.addButton(QMessageBox::Abort);
+
+    msgBox.exec();
+
+    if (msgBox.clickedButton() == connectButton) {
+        for (int i {0}; i<restaurant.vCustomers.size(); i++)
+        {
+            if (restaurant.vCustomers[i].getName() == ui->SelectedCustomerComboBox->currentText().toStdString())
+            {
+                restaurant.vCustomers.erase(restaurant.vCustomers.begin() + i);
+            }
+        }
+        updateSelectedCustomerComboBox();
+    } else if (msgBox.clickedButton() == abortButton) {
+        // abort
+    }
+
 }

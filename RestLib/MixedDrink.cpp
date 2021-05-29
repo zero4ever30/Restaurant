@@ -6,7 +6,7 @@
 namespace RestLib {
 
     MixedDrink::MixedDrink(const std::string &_drinkname1, const std::string &_drinkname2) :
-    Drink{_drinkname1 + "with "+_drinkname2} ,
+    Drink{_drinkname1 + " with "+_drinkname2} ,
     vIngredients{_drinkname1 , _drinkname2}{}
 
     std::vector<std::string> MixedDrink::getIngredients() const {

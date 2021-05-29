@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <string>
 
 namespace RestLib {
 
@@ -16,7 +17,7 @@ namespace RestLib {
     public:
         //AbstractDish() = default;
 
-        explicit AbstractDish(const std::string &&_dishName);
+        explicit AbstractDish(const std::string &&_dishName , const std::vector<std::string> _recipe );
 
         virtual ~AbstractDish();
 
@@ -32,8 +33,8 @@ namespace RestLib {
     protected:
         void AddIngredients(const std::string& _ingredient);
 
-    private:
         std::vector<std::string> vIngredients;
+    private:
         std::vector<std::string> Used_Ingredients;
         std::string dishName;
 

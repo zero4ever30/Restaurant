@@ -8,8 +8,8 @@ using namespace std;
 
 namespace RestLib {
 
-    AbstractDish::AbstractDish(const string && _dishName)
-            : dishName{_dishName} {}
+    AbstractDish::AbstractDish(const std::string &&_dishName , const std::vector<std::string> _recipe )
+            : dishName{_dishName} , vIngredients{_recipe} {}
 
     AbstractDish::~AbstractDish() = default;
 
