@@ -8,17 +8,17 @@
 #include <ctime>
 #include <sstream>
 
+using namespace std;
+
 namespace RestLib
 {
-
-    Restaurant::Restaurant(std::string _Restaurant_name , std::string FileName) : Restaurant_name{_Restaurant_name} {
-
-        std::ifstream Datai;                                                // new in stream object
-
+    Restaurant::Restaurant(const string& restaurantName, const string& _filename) : Restaurant_name{restaurantName} {
+        ifstream Datai;                                                // new in stream object
+        filename = _filename;
 
         try {
-            Datai.open(FileName,std::ifstream::in);                        // open the file with the name (address) 'Filename'
-            Datai.exceptions(std::ifstream::failbit | std::ifstream::badbit);        // possible exceptions
+            Datai.open(filename,ifstream::in);                        // open the file with the name (address) 'filename'
+            Datai.exceptions(ifstream::failbit | ifstream::badbit);        // possible exceptions
             while (!Datai.eof()&Datai.good()) {                           // as long as the file is open, readable and not finished keep reading
 
                 string tempV {};
@@ -30,24 +30,51 @@ namespace RestLib
                 {   order tempOrder("","");
                     getline(Datai,tempOrder.orderdate,';');
                     getline(Datai,tempOrder.ordername,';');
-                    tempCustomer.customerOrderHistory.push_back(std::move(tempOrder));
+                    tempCustomer.customerOrderHistory.push_back(move(tempOrder));
                 }
-                vCustomers.push_back(std::move(tempCustomer));
+                vCustomers.push_back(move(tempCustomer));
                 if (!Datai.eof() && Datai.peek()=='\n') Datai.ignore(1); // deletes the \n)
             }
             Datai.close();                                                // file must be closed again
-        } catch (const std::system_error& e) {                           // exception handling
-            std::cerr << "Error File could not be Found. " << std::endl
-                      << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << std::flush;
+        } catch (const system_error& e) {                           // exception handling
+            cerr << "Error File could not be Found. " << endl
+                      << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
         }
     }
 
-    Customer& Restaurant::FindCustomer(std::string _customerLastName) {
+    void Restaurant::SaveHistory() {
+        ofstream Savefile;
+
+        try {
+            Savefile.open(filename, ofstream::out);                        // open the file with the name (address) 'filename'
+            Savefile.exceptions(ofstream::failbit | ofstream::badbit);        // possible exceptions
+            bool firstLine {false};
+            for (const auto &_customer : vCustomers) {
+                if (!firstLine) {
+                    Savefile << _customer.getSaveName() << ";";
+                    firstLine = true;
+                } else {
+                    Savefile << endl << _customer.getSaveName() << ";";
+                }
+
+                for (const auto &_orderHis : _customer.customerOrderHistory) {
+                    Savefile << _orderHis.orderdate << ";" << _orderHis.ordername << ";";
+                }
+            }
+            Savefile.close();
+
+        } catch (const system_error& e) {                           // exception handling
+            cerr << "Error File could not be Found. " << endl
+                 << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
+        }
+    }
+
+    Customer& Restaurant::FindCustomer(string _customerLastName) {
         for (auto &_Customer : vCustomers) {
             if (_Customer.getName() == _customerLastName)
                 return _Customer;
             else
-            {std::cerr << "User is not Fround" << std::endl;
+            {cerr << "User is not Fround" << endl;
                 Customer a ("","");
                 return a;                           ////////Falsch
             }
@@ -57,7 +84,7 @@ namespace RestLib
     void Restaurant::Customer_List() {
         for (auto const &_customer : vCustomers)
         {
-            std::cout<<_customer.getName()<<std::endl;
+            cout<<_customer.getName()<<endl;
         }
     }
 
@@ -69,10 +96,10 @@ namespace RestLib
     }
 
     void Restaurant::AddToCustomers(Customer _newCustomer) {
-        vCustomers.push_back(std::move(_newCustomer));
+        vCustomers.push_back(move(_newCustomer));
     }
 
-    void Restaurant::createNewOrder(const std::string& customerName, const std::string& dishName, const std::string& drinkName , const int dishIndex , const int drinkIndex) {
+    void Restaurant::createNewOrder(const string& customerName, const string& dishName, const string& drinkName , const int dishIndex , const int drinkIndex) {
         for (Customer& _customer : this->vCustomers) {
             if (_customer.getName() == customerName) {
                 // Get current date
@@ -105,7 +132,8 @@ namespace RestLib
                 break;
             }
         }
-
     }
+
+
 
 }

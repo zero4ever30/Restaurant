@@ -38,6 +38,11 @@ namespace RestLib {
         return name;
     }
 
+    string Customer::getSaveName() const {
+        string saveName = customerName + ',' + customerLastName;
+        return saveName;
+    }
+
     void Customer::printOrders() {
         cout << "The costumer " << this->getName();
         if (!this->customerOrderHistory.empty()) {
