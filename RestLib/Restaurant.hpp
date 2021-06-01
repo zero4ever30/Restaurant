@@ -1,6 +1,8 @@
-//
-// Created by Momme Sherif on 20/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #ifndef FINAL_PROJECT_RESTAURANT_HPP
 #define FINAL_PROJECT_RESTAURANT_HPP
@@ -14,6 +16,7 @@
 #include <ctime>
 #include <sstream>
 #include "Ingredients.hpp"
+#include "Finance.hpp"
 
 namespace RestLib
 {
@@ -44,10 +47,8 @@ namespace RestLib
         std::string Restaurant_name;
         std::vector<item> Stock;
         std::string filename;
-
+        RestLib::Finance financeStatistics{Restaurant_name, "Max Mustermann"};
     };
 }
-
-
 
 #endif //FINAL_PROJECT_RESTAURANT_HPP

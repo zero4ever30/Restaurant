@@ -1,12 +1,17 @@
-//
-// Created by Momme Sherif on 28/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #ifndef MAIN_CPP_DRINK_HPP
 #define MAIN_CPP_DRINK_HPP
 #include "string"
 #include "vector"
 #include "memory"
+#include "vector"
+#include "Ingredients.hpp"
+
 namespace RestLib
 {
     class Drink {
@@ -17,8 +22,9 @@ namespace RestLib
         Drink() = delete;
 
         std::string GetName() const;
-        /*virtual std::vector<std::string> getIngredients() const = 0;
-        virtual int getNumberIngredients() const = 0;
+        virtual std::vector<Ingredient> GetIngredients();
+
+        /*virtual int GetNumberIngredients() const = 0;
         virtual void AddIngredients(const std::string& _ingredient) = 0;*/
     private:
         std::string drinkName;

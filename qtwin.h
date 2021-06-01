@@ -1,13 +1,14 @@
-//
-// Created by Momme Sherif on 27/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #ifndef MAIN_CPP_QTWIN_H
 #define MAIN_CPP_QTWIN_H
 
 #include <QWidget>
 #include "Restaurant.hpp"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class QtWin; }
@@ -47,11 +48,7 @@ private:
     Ui::QtWin *ui;
     RestLib::Restaurant restaurant{"Hello world" , "Database.txt"};
 
-
     void updateSelectedCustomerComboBox();
-
-
-
 };
 
 

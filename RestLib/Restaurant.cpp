@@ -1,6 +1,8 @@
-//
-// Created by Momme Sherif on 20/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #include "Restaurant.hpp"
 
@@ -37,7 +39,11 @@ namespace RestLib
                       << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
         }
 
+        // Initialize Ingredients
         Ingredients::LoadIngredientsFromFile("IngredientList.txt");
+
+        // Load FinanceClass
+        financeStatistics.LoadFinanceClass("FinanceStatistics.txt");
     }
 
     void Restaurant::SaveHistory() {
@@ -46,11 +52,11 @@ namespace RestLib
         try {
             Savefile.open(filename, ofstream::out);                        // open the file with the name (address) 'filename'
             Savefile.exceptions(ofstream::failbit | ofstream::badbit);        // possible exceptions
-            bool firstLine {false};
+            bool firstLine {true};
             for (const auto &_customer : vCustomers) {
-                if (!firstLine) {
+                if (firstLine) {
                     Savefile << _customer.getSaveName() << ";";
-                    firstLine = true;
+                    firstLine = false;
                 } else {
                     Savefile << endl << _customer.getSaveName() << ";";
                 }
@@ -62,9 +68,11 @@ namespace RestLib
             Savefile.close();
 
         } catch (const system_error& e) {                           // exception handling
-            cerr << "Error File could not be Found. " << endl
+            cerr << "Error File could not be Found. " << filename << endl
                  << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
         }
+
+        financeStatistics.SaveFinanceClass("FinanceStatistics.txt");
     }
 
     Customer& Restaurant::FindCustomer(string _customerLastName) {
@@ -110,9 +118,18 @@ namespace RestLib
                 stringStream << now->tm_mday << "." << (now->tm_mon + 1) << "." << (now->tm_year + 1900);
                 string orderDate = stringStream.str();
 
+                double sellPrice{0};
+                double price{0};
+
                 // Create new dish order
                 if (0 <= dishIndex) {
                     DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , this->currentIngredients);
+
+                    sellPrice = Ingredients::CalculateIngredientsSellPrice(this->currentIngredients);
+                    financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DISHES, sellPrice);
+                    financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DISHES, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
+
+                    // TODO Add sellPrice to order
                     order newDishOrder(orderDate, dish->GetDishName());
 
                     _customer.ServeDish(dish);
@@ -126,14 +143,30 @@ namespace RestLib
                 if (0 <= drinkIndex) {
                     string drinkName;
                     if (0 <= selectedMixIndex){
-                        DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
-                        drinkName = drink->GetName();
-                        _customer.ServeDrink(drink);
+                        // Create mixed drink
+                        vector<DrinksBar::_DrinkType> drinkI {(DrinksBar::_DrinkType)drinkIndex, (DrinksBar::_DrinkType)selectedMixIndex};
+
+                        DrinkType newMixedDrink {DrinksBar::PrepareDrink<DrinkType>(drinkI)};
+                        newMixedDrink->GetName();
+                        _customer.ServeDrink(newMixedDrink);
+
+                        sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
                     } else {
-                        DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
-                        drinkName = drink->GetName();
-                        _customer.ServeDrink(drink);
+                        // Create simple single Drink
+                        vector<DrinksBar::_DrinkType> drinkI {(DrinksBar::_DrinkType)drinkIndex};
+
+                        DrinkType newDrink {DrinksBar::PrepareDrink<DrinkType, Drink>(drinkI)};
+                        drinkName = newDrink->GetName();
+                        _customer.ServeDrink(newDrink);
+
+                        Ingredient localI {Ingredients::GetIngredientByName(drinkName)};
+                        sellPrice = localI.GetSellPrice();
+                        price = localI.GetPrice();
                     }
+
+                    financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DRINKS, sellPrice);
+                    financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DRINKS, price);
 
                     _customer.DrinkDrink();
                     order newDrinkOrder(orderDate, drinkName);

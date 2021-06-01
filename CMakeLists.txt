@@ -22,5 +22,8 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/IngredientList.txt
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Database.txt
         ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/FinanceStatistics.txt
+        ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+
 add_executable(Final_Project main.cpp RestLib/Restaurant.cpp RestLib/Restaurant.hpp qtwin.cpp qtwin.h qtwin.ui)
 target_link_libraries(Final_Project Qt6::Widgets Qt6::Core Qt6::Gui)

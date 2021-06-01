@@ -1,6 +1,8 @@
-//
-// Created by Momme Sherif on 19/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #include "Customer.hpp"
 using namespace std;
