@@ -21,10 +21,13 @@ namespace RestLib {
     class DrinksBar {
     public:
         enum _DrinkType : int {
-            Cola = 0, ColaLight, Fanta, Sprite, Water, Beer, Sparklingwater, Redwine, Whitewine, Banana , Weizenbier, Rum , Redbull
+            Cola, Cola_Light, Sprite, Fanta, Water, Sparkling_Water, Red_Wine, White_Wine, Beer, Wheat_Beer, Banana_Juice, Apple_Juice, Cherry_Juice, Rum, Vodka, Gin, Redbull
         };
-        static inline std::vector<std::string> availableDrinks  {"Cola", "Cola Light", "Fanta", "Sprite", "Water", "Beer", "Sparkling water",
-                                                  "Redwine", "Whitewine", "Banana", "Weizenbier", "Rum" , "Redbull"};
+        static inline std::vector<std::string> availableDrinks  {"Cola", "Cola Light", "Sprite", "Fanta", "Water", "Sparkling Water", "Red Wine", "White Wine", "Beer", "Wheat Beer", "Banana Juice", "Apple Juice", "Cherry Juice", "Rum", "Vodka", "Gin", "Redbull"};
+
+
+
+
         static DrinkType PrepareDrink(_DrinkType const &drinkType);
         static DrinkType PrepareDrink(const _DrinkType &drinkType1, const _DrinkType &drinkType2);
         //static DrinkType Mix(_DrinkType const &drinkType1 , _DrinkType const &drinkType2);

@@ -3,6 +3,9 @@
 //
 
 #include "MixedDrink.hpp"
+#include "Restaurant.hpp"
+#include "Ingredients.hpp"
+
 namespace RestLib {
 
     MixedDrink::MixedDrink(const std::string &_drinkname1, const std::string &_drinkname2) :
@@ -21,5 +24,12 @@ namespace RestLib {
         vIngredients.push_back(_ingredient);
     }
 
-
+    double MixedDrink::GetPrice() {
+        double price {0};
+        for (auto &IngredientName : vIngredients) {
+            Ingredient localI = Ingredients::GetIngredientByName(IngredientName);
+            price = price + (localI.GetPrice() / 2);
+        }
+        return price;
+    }
 }

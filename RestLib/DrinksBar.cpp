@@ -10,7 +10,7 @@
 
 namespace RestLib {
     DrinkType DrinksBar::PrepareDrink(_DrinkType const &drinkType) {
-         DrinkType _drink = std::make_unique<Drink>(DrinksBar::availableDrinks[drinkType]);
+        DrinkType _drink = std::make_unique<Drink>(DrinksBar::availableDrinks[drinkType]);
         return _drink;
     }
     DrinkType DrinksBar::PrepareDrink(const _DrinkType &drinkType1, const _DrinkType &drinkType2) {

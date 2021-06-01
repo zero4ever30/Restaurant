@@ -17,7 +17,7 @@ namespace RestLib {
 
     void Customer::ServeDrink(DrinkType &_servedDrink) {
         customerDrink = move(_servedDrink);
-        cout << "The " << customerDrink->getDrinkName() << " for " << this->getName() << endl;
+        cout << "The " << customerDrink->GetName() << " for " << this->getName() << endl;
     }
 
     void Customer::EatDish() {
@@ -27,7 +27,7 @@ namespace RestLib {
 
     }
     void Customer::DrinkDrink() {
-        cout << this->getName() << " drinks " << customerDrink->getDrinkName() << "." <<  endl;
+        cout << this->getName() << " drinks " << customerDrink->GetName() << "." <<  endl;
         //this->customerOrderHistory.push_back(order("1.1.2000",customerDish->GetDishName()));        //// Date has to be changed
         customerDrink = nullptr;
 

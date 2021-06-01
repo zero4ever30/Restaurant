@@ -3,10 +3,6 @@
 //
 
 #include "Restaurant.hpp"
-#include <fstream>
-#include <iostream>
-#include <ctime>
-#include <sstream>
 
 using namespace std;
 
@@ -37,9 +33,11 @@ namespace RestLib
             }
             Datai.close();                                                // file must be closed again
         } catch (const system_error& e) {                           // exception handling
-            cerr << "Error File could not be Found. " << endl
+            cerr << "Error File could not be Found: " << filename << endl
                       << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
         }
+
+        Ingredients::LoadIngredientsFromFile("IngredientList.txt");
     }
 
     void Restaurant::SaveHistory() {
@@ -70,7 +68,7 @@ namespace RestLib
     }
 
     Customer& Restaurant::FindCustomer(string _customerLastName) {
-        for (auto &_Customer : vCustomers) {
+        /*for (auto &_Customer : vCustomers) {
             if (_Customer.getName() == _customerLastName)
                 return _Customer;
             else
@@ -78,7 +76,7 @@ namespace RestLib
                 Customer a ("","");
                 return a;                           ////////Falsch
             }
-        }
+        }*/
     }
 
     void Restaurant::Customer_List() {
@@ -99,11 +97,12 @@ namespace RestLib
         vCustomers.push_back(move(_newCustomer));
     }
 
-    void Restaurant::createNewOrder(const string& customerName, const string& dishName,
-                                    const string& drinkName , const int dishIndex , const int drinkIndex , const std::vector<std::string> recipe,
-                                    const string& selectedMix , const int selectedMixIndex) {
+    void Restaurant::createNewOrder(const string& customerName, const int& dishIndex , const int& drinkIndex, const int& selectedMixIndex) {
+        //cout << "createNewOrder " << "dishIndex[" << dishIndex << "]" << "drinkIndex[" << drinkIndex << "]" << "selectedMixIndex[" << selectedMixIndex << "]" << endl;
+
         for (Customer& _customer : this->vCustomers) {
             if (_customer.getName() == customerName) {
+
                 // Get current date
                 time_t t = time(0);
                 tm* now = localtime(&t);
@@ -112,30 +111,35 @@ namespace RestLib
                 string orderDate = stringStream.str();
 
                 // Create new dish order
-                if ("No Dish" != dishName) {
-                    DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , recipe);
+                if (0 <= dishIndex) {
+                    DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , this->currentIngredients);
+                    order newDishOrder(orderDate, dish->GetDishName());
+
                     _customer.ServeDish(dish);
                     _customer.EatDish();
-                    order newDish(orderDate, dishName);
-                    cout << "Customer: " << customerName << " ordered Dish: " << newDish.getOrderName() << " [" << newDish.getOrderDate() << "]" << endl;
 
-                    //_customer.ServeDish();
-                    _customer.customerOrderHistory.push_back(newDish);
+                    cout << "Customer: " << customerName << " ordered Dish: " << newDishOrder.getOrderName() << " [" << newDishOrder.getOrderDate() << "]" << endl;
+                    _customer.customerOrderHistory.push_back(newDishOrder);
                 }
+
                 // Create new drink order
-                if ("No Drink" != drinkName && "Don't mix"!= selectedMix) {
-                    if ("Don't mix"!= selectedMix){
+                if (0 <= drinkIndex) {
+                    string drinkName;
+                    if (0 <= selectedMixIndex){
                         DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
+                        drinkName = drink->GetName();
                         _customer.ServeDrink(drink);
-                    }
-                    else{
+                    } else {
                         DrinkType drink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
+                        drinkName = drink->GetName();
                         _customer.ServeDrink(drink);
                     }
+
                     _customer.DrinkDrink();
-                    order newDrink(orderDate, drinkName);
-                    cout << "Customer: " << customerName << " ordered Drink: " << newDrink.getOrderName() << " [" << newDrink.getOrderDate() << "]" << endl;
-                    _customer.customerOrderHistory.push_back(newDrink);
+                    order newDrinkOrder(orderDate, drinkName);
+
+                    cout << "Customer: " << customerName << " ordered Drink: " << newDrinkOrder.getOrderName() << " [" << newDrinkOrder.getOrderDate() << "]" << endl;
+                    _customer.customerOrderHistory.push_back(newDrinkOrder);
                 }
                 break;
             }

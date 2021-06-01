@@ -4,12 +4,14 @@
 
 #include "AbstractDish.hpp"
 
+#include <utility>
+
 using namespace std;
 
 namespace RestLib {
 
-    AbstractDish::AbstractDish(const std::string &&_dishName , const std::vector<std::string> _recipe )
-            : dishName{_dishName} , vIngredients{_recipe} {}
+    AbstractDish::AbstractDish(const std::string &&_dishName , std::vector<Ingredient> _recipe)
+            : dishName{_dishName}, vRecipe{move(_recipe)} {}
 
     AbstractDish::~AbstractDish() = default;
 
@@ -17,15 +19,15 @@ namespace RestLib {
         return dishName;
     }
 
-    vector<std::string> AbstractDish::GetIngredients() const {
+    vector<Ingredient> AbstractDish::GetIngredients() const {
         return vIngredients;
     }
 
     int AbstractDish::GetNumberIngredients() const {
-        return Used_Ingredients.size();
+        return vIngredients.size();
     }
 
-    void AbstractDish::AddIngredients(const std::string& _ingredient) {
-        Used_Ingredients.push_back(_ingredient);
+    void AbstractDish::AddIngredients(const Ingredient& _ingredient) {
+        vIngredients.push_back(_ingredient);
     }
 }

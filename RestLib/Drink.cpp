@@ -10,7 +10,7 @@ namespace RestLib
     Drink::Drink(const std::string &_drinkName):drinkName{_drinkName} {}
     Drink::~Drink() = default;
 
-    std::string Drink::getDrinkName() const {
+    std::string Drink::GetName() const {
         return drinkName;
     }
 

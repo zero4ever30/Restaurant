@@ -9,7 +9,11 @@
 #include "item.hpp"
 #include "Kitchen.hpp"
 #include "DrinksBar.hpp"
-//#include "../qtwin.h"
+#include <fstream>
+#include <iostream>
+#include <ctime>
+#include <sstream>
+#include "Ingredients.hpp"
 
 namespace RestLib
 {
@@ -29,10 +33,10 @@ namespace RestLib
 
         std::vector<Customer> vCustomers;
 
+        std::vector<Ingredient> currentIngredients;
 
-        void createNewOrder(const string& customerName, const string& dishName,
-                            const string& drinkName , const int dishIndex , const int drinkIndex , const std::vector<std::string> recipe,
-                            const string& selectedMix , const int selectedMixIndex);
+        void createNewOrder(const std::string& customerName, const int& dishIndex , const int& drinkIndex, const int& selectedMixIndex);
+
     protected:
 
 
@@ -42,7 +46,6 @@ namespace RestLib
         std::string filename;
 
     };
-
 }
 
 

@@ -9,12 +9,13 @@
 #include <QMessageBox>
 #include "qtwin.h"
 #include "ui_QtWin.h"
-#include "order.hpp"
 #include "Restaurant.hpp"
 #include "Customer.hpp"
 #include <vector>
+#include "Ingredients.hpp"
 
 using namespace std;
+using namespace RestLib;
 
 QtWin::QtWin(QWidget *parent) :
         QWidget(parent), ui(new Ui::QtWin) {
@@ -55,20 +56,16 @@ void QtWin::on_orderButton_clicked()
             QMessageBox::warning(this , "Warning!!" , "No dish or drink has been chosen!\nNo order has been made!");
         else {
             string selectedCustomer{ui->SelectedCustomerComboBox->currentText().toStdString()};
-            string selectedDish{ui->dishList->currentItem()->text().toStdString()};
-            string selectedDrink{ui->drinkList->currentItem()->text().toStdString()};
-            string selectedMix{ui->mixDrinksList->currentItem()->text().toStdString()};
+
             int selectedDishIndex{ui->dishList->currentRow() - 1};
             int selectedDrinkIndex{ui->drinkList->currentRow() - 1};
             int selectedMixIndex{ui->mixDrinksList->currentRow() - 1};
-            //ui->SelectedCustomerComboBox->currentIndex()
 
-            std::vector<std::string> Recipe;
-            for (auto i{1}; i < ui->ingredientsList->count(); i++) {
-                Recipe.push_back(ui->ingredientsList->item(i)->text().toStdString());
-            }
-            restaurant.createNewOrder(selectedCustomer, selectedDish, selectedDrink, selectedDishIndex,
-                                      selectedDrinkIndex, Recipe, selectedMix, selectedMixIndex);
+            cout << "selectedDishIndex: " << selectedDishIndex << endl;
+            cout << "selectedDrinkIndex: " << selectedDrinkIndex << endl;
+            cout << "selectedMixIndex: " << selectedMixIndex << endl;
+
+            restaurant.createNewOrder(selectedCustomer, selectedDishIndex, selectedDrinkIndex, selectedMixIndex);
             updateOrderTab();
         }
     }
@@ -93,17 +90,34 @@ void QtWin::updateOrderTab() {
     ui->mixDrinksList->addItem("Don't mix");
 
     // Add avaiable drinks and dishes
-    for (const auto& dish : RestLib::Kitchen::availableDishes)
+    for (const auto& dish : Kitchen::availableDishes)
     {
         ui->dishList->addItem(QString::fromStdString(dish));
     }
-    for (const auto& drink : RestLib::DrinksBar::availableDrinks)
+    for (const auto& drink : DrinksBar::availableDrinks)
     {
-        ui->drinkList->addItem(QString::fromStdString(drink));
+        Ingredient localI = Ingredients::GetIngredientByName(drink);
+
+        ostringstream stringStream;
+        if (localI.GetName() == drink) {
+            stringStream << drink << ": " << localI.GetSellPrice() << " €";
+        } else {
+            stringStream << drink << ": ?? €";
+        }
+
+        ui->drinkList->addItem(QString::fromStdString(stringStream.str()));
     }
-    for (const auto& drink : RestLib::DrinksBar::availableDrinks)
+    for (const auto& drink : DrinksBar::availableDrinks)
     {
-        ui->mixDrinksList->addItem(QString::fromStdString(drink));
+        Ingredient localI = Ingredients::GetIngredientByName(drink);
+
+        ostringstream stringStream;
+        if (localI.GetName() == drink) {
+            stringStream << drink << ": " << localI.GetSellPrice() << " €";
+        } else {
+            stringStream << drink << ": ?? €";
+        }
+        ui->mixDrinksList->addItem(QString::fromStdString(stringStream.str()));
     }
 
     // Select each first empty lines
@@ -120,7 +134,7 @@ void QtWin::updateCostumerHistoryTab(){
 
     // init
     ui->CHTable->setColumnCount(2);
-    for (RestLib::Customer& _customer : restaurant.vCustomers)
+    for (Customer& _customer : restaurant.vCustomers)
     {
         if (ui->SelectedCustomerComboBox->currentText().toStdString()==_customer.getName())
         {
@@ -152,7 +166,7 @@ void QtWin::updateCostumerHistoryTab(){
 void QtWin::updateSelectedCustomerComboBox(){
     ui->SelectedCustomerComboBox->clear();
     // Get active customers and add them
-    for (RestLib::Customer& _customer : restaurant.vCustomers) {
+    for (Customer& _customer : restaurant.vCustomers) {
         ui->SelectedCustomerComboBox->addItem(QString::fromStdString(_customer.getName()));
     }
 }
@@ -163,29 +177,66 @@ void QtWin::on_SelectedCustomerComboBox_currentIndexChanged() {
 
 void QtWin::on_dishList_clicked(){
 
+    // Clear vector and widget
     ui->ingredientsList->clear();
+    restaurant.currentIngredients.clear();
+
     // get ingredients
 
-    if(ui->ingredientsList->currentRow()!=0){
+    if(ui->dishList->currentRow()!=0){
         ui->ingredientsList->addItem("Default");
-        for (const auto& item : RestLib::Kitchen::Recipes[ui->dishList->currentRow()-1])
+
+        for (const auto& ingredientName : Kitchen::Recipes[ui->dishList->currentRow()-1])
         {
-            ui->ingredientsList->addItem(QString::fromStdString(item));
+            Ingredient localI = Ingredients::GetIngredientByName(ingredientName);
+
+            ostringstream stringStream;
+            if (localI.IsModifieable()) {
+                stringStream << "+/- ";
+            } else {
+                stringStream << "    ";
+            }
+            if (localI.GetName() == ingredientName) {
+                stringStream << ingredientName << ": " << localI.GetSellPrice() << " €";
+            } else {
+                stringStream << ingredientName << ": ?? €";
+            }
+            ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
+            restaurant.currentIngredients.push_back(localI);
         }
+
+        ostringstream stringStream;
+        stringStream << "\t\tPrice: " << Ingredients::CalculateIngredientsSellPrice(restaurant.currentIngredients) << " €";
+        ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
     }
 
 }
+
+void QtWin::updateCurrentDishFullPrice() {
+    ostringstream stringStream;
+    stringStream << "\t\tPrice: " << Ingredients::CalculateIngredientsSellPrice(restaurant.currentIngredients) << " €";
+    ui->ingredientsList->item(ui->ingredientsList->count()-1)->setText(QString::fromStdString(stringStream.str()));
+}
+
 void QtWin::on_ingredientsList_clicked(){
 
-    if (ui->ingredientsList->currentRow() == 0){
+    if (ui->ingredientsList->currentRow() == 0 || ui->ingredientsList->currentRow() == ui->ingredientsList->count()-1){
         on_dishList_clicked();
-    }
-    else
-    {
-        ui->ingredientsList->takeItem(ui->ingredientsList->currentRow());
+    } else {
+        string name = ui->ingredientsList->currentItem()->text().toStdString();
+
+        if (name.find("+/-") != -1) {
+            ui->ingredientsList->takeItem(ui->ingredientsList->currentRow());
+            restaurant.currentIngredients.erase(restaurant.currentIngredients.begin() + (ui->ingredientsList->count()-1));
+            restaurant.currentIngredients.shrink_to_fit();
+            updateCurrentDishFullPrice();
+        }
     }
 }
+
 void QtWin::on_addIngredientText_returnPressed(){
+    //TODO Choose avaiable Ingredients
+
     ui->ingredientsList->addItem(ui->addIngredientText->text());
     ui->addIngredientText->clear();
 }
@@ -201,7 +252,7 @@ void QtWin::on_lastNameText_returnPressed() {
 
     if (msgBox.clickedButton() == connectButton) {
 
-        restaurant.AddToCustomers(RestLib::Customer(
+        restaurant.AddToCustomers(Customer(
                 ui->firstNameText->text().toStdString(),
                 ui->lastNameText->text().toStdString()));
         ui->firstNameText->clear();

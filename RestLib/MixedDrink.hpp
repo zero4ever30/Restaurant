@@ -14,10 +14,10 @@ namespace RestLib{
         std::vector<std::string> getIngredients() const;// override;
         int getNumberIngredients() const;// override;
         void AddIngredients(const std::string &_ingredient);// override;
+
+        double GetPrice();
     private:
         std::vector<std::string> vIngredients;
-
-
     };
 }
 

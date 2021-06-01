@@ -10,15 +10,15 @@
 using namespace std;
 
 namespace RestLib {
-    DishType Kitchen::CreatDish(_DishType const dishType , std::vector<std::string> _recipe) {
+    DishType Kitchen::CreatDish(_DishType const dishType , std::vector<Ingredient>& _recipe) {
 
         DishType _dish {nullptr};
         switch (dishType) {
             case _DishType::PizzaMargherita:
-                _dish = make_unique<RestLib::PizzaMargherita>("Pizza Margherita" , _recipe);
+                _dish = make_unique<RestLib::PizzaMargherita>("Pizza Margherita", _recipe);
                 break;
             case _DishType::VegetableSoup:
-                _dish = make_unique<RestLib::VegetableSoup>("Vegetable Soup" , _recipe);
+                _dish = make_unique<RestLib::VegetableSoup>("Vegetable Soup", _recipe);
                 break;
         }
         if (nullptr != _dish) {

@@ -29,6 +29,9 @@ public:
 
     void updateOrderTab();
     void updateCostumerHistoryTab();
+
+    void updateCurrentDishFullPrice();
+
 private slots:
     void on_tabOrder_currentChanged(int index);
     void on_orderButton_clicked();
@@ -39,6 +42,7 @@ private slots:
     void on_addIngredientText_returnPressed();
     void on_lastNameText_returnPressed();
     void on_deleteCustomerButton_clicked();
+
 private:
     Ui::QtWin *ui;
     RestLib::Restaurant restaurant{"Hello world" , "Database.txt"};
