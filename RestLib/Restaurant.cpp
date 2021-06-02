@@ -75,18 +75,6 @@ namespace RestLib
         this->financeStatistics.SaveFinanceClass("FinanceStatistics.txt");
     }
 
-    Customer& Restaurant::FindCustomer(string _customerLastName) {
-        /*for (auto &_Customer : vCustomers) {
-            if (_Customer.getName() == _customerLastName)
-                return _Customer;
-            else
-            {cerr << "User is not Fround" << endl;
-                Customer a ("","");
-                return a;                           ////////Falsch
-            }
-        }*/
-    }
-
     void Restaurant::Customer_List() {
         for (auto const &_customer : vCustomers)
         {
