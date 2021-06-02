@@ -23,7 +23,7 @@ QtWin::QtWin(QWidget *parent) :
         QWidget(parent), ui(new Ui::QtWin) {
     ui->setupUi(this);
 
-    restaurant.PrintOrderHistoryForAll();
+    //restaurant.PrintOrderHistoryForAll();
     // All updates must be here too!!!!!!!!
     updateSelectedCustomerComboBox();
     updateOrderTab();
@@ -49,6 +49,19 @@ void QtWin::on_tabOrder_currentChanged(int index)
 void QtWin::on_pushButton_save_clicked() {
     restaurant.SaveHistory();
 }
+void QtWin::updateDueAmount(){
+
+    for (Customer& _customer : restaurant.vCustomers)
+    {
+        if (ui->SelectedCustomerComboBox->currentText().toStdString()==_customer.getName())
+        {
+
+            ui->amountdueText->setText("Amount Due: " + QString::number(_customer.getDueAmount(), 'f', 2));
+
+        }
+    }
+
+}
 
 // OrderTab
 void QtWin::on_orderButton_clicked()
@@ -69,6 +82,7 @@ void QtWin::on_orderButton_clicked()
 
             restaurant.createNewOrder(selectedCustomer, selectedDishIndex, selectedDrinkIndex, selectedMixIndex);
             updateOrderTab();
+            updateDueAmount();
         }
     }
     else{
@@ -175,13 +189,40 @@ void QtWin::updateSelectedCustomerComboBox(){
 
 void QtWin::on_SelectedCustomerComboBox_currentIndexChanged() {
     updateCostumerHistoryTab();
+    updateDueAmount();
 }
+
+// operator overloading
+std::string & operator - (std::string & os, const std::string& s0)
+{
+    try {
+        std::size_t index {os.find(s0)};
+        os.erase(index , s0.size());
+    }catch (...){}
+
+    return os;
+}
+
+std::string & operator * (std::string & os, const std::string& s0)
+{
+        try {
+            std::size_t index {os.find(s0)};
+            os.erase(index , os.size());
+        }catch (...){}
+
+
+
+    return os;
+}
+
 
 void QtWin::on_dishList_clicked(){
 
     // Clear vector and widget
     ui->ingredientsList->clear();
     restaurant.currentIngredients.clear();
+    ui->addIngredientcomboBox->clear();
+    ui->addIngredientcomboBox->addItem("No Extras");
 
     // get ingredients
 
@@ -200,48 +241,47 @@ void QtWin::on_dishList_clicked(){
             }
             if (localI.GetName() == ingredientName) {
                 stringStream << ingredientName << ": " << localI.GetSellPrice() << " €";
+                if(localI.IsModifieable())
+                {
+                    string s1 = stringStream.str();
+                    ui->addIngredientcomboBox->addItem(QString::fromStdString((s1 - "+/- ")));
+                }
             } else {
                 stringStream << ingredientName << ": ?? €";
             }
             ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
             restaurant.currentIngredients.push_back(localI);
         }
-
-        ostringstream stringStream;
-        stringStream << "\t\tPrice: " << Ingredients::CalculateIngredientsSellPrice(restaurant.currentIngredients) << " €";
-        ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
+        updateCurrentDishFullPrice();
     }
 
 }
 
 void QtWin::updateCurrentDishFullPrice() {
+    ui->ingredientsList->takeItem(ui->ingredientsList->count());
     ostringstream stringStream;
     stringStream << "\t\tPrice: " << Ingredients::CalculateIngredientsSellPrice(restaurant.currentIngredients) << " €";
-    ui->ingredientsList->item(ui->ingredientsList->count()-1)->setText(QString::fromStdString(stringStream.str()));
+    ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
 }
 
 void QtWin::on_ingredientsList_clicked(){
 
-    if (ui->ingredientsList->currentRow() == 0 || ui->ingredientsList->currentRow() == ui->ingredientsList->count()-1){
+    if (ui->ingredientsList->currentRow() == 0){
         on_dishList_clicked();
     } else {
         string name = ui->ingredientsList->currentItem()->text().toStdString();
 
         if (name.find("+/-") != -1) {
+            restaurant.currentIngredients.erase(restaurant.currentIngredients.begin() + (ui->ingredientsList->currentRow()-1));
             ui->ingredientsList->takeItem(ui->ingredientsList->currentRow());
-            restaurant.currentIngredients.erase(restaurant.currentIngredients.begin() + (ui->ingredientsList->count()-1));
+            ui->ingredientsList->takeItem(ui->ingredientsList->count()-1); // delete the price
             restaurant.currentIngredients.shrink_to_fit();
-            updateCurrentDishFullPrice();
+            updateIngterientsList();
         }
     }
 }
 
-void QtWin::on_addIngredientText_returnPressed(){
-    //TODO Choose avaiable Ingredients
 
-    ui->ingredientsList->addItem(ui->addIngredientText->text());
-    ui->addIngredientText->clear();
-}
 
 void QtWin::on_lastNameText_returnPressed() {
     QMessageBox msgBox(QMessageBox::Warning , "Warning!" , "");
@@ -273,12 +313,12 @@ void QtWin::on_deleteCustomerButton_clicked() {
     QMessageBox msgBox(QMessageBox::Warning , "Warning!" , "");
     msgBox.setText("Are you sure you want to remove the following customer?");
     msgBox.setInformativeText("<FONT COLOR='#ff0000'>" + ui->SelectedCustomerComboBox->currentText() + "</FONT>");
-    QPushButton *connectButton = msgBox.addButton(tr("REMOVE"), QMessageBox::YesRole);
+    QPushButton *delete_customer_yes = msgBox.addButton(tr("REMOVE"), QMessageBox::YesRole);
     QPushButton *abortButton = msgBox.addButton(QMessageBox::Abort);
 
     msgBox.exec();
 
-    if (msgBox.clickedButton() == connectButton) {
+    if (msgBox.clickedButton() == delete_customer_yes) {
         for (int i {0}; i<restaurant.vCustomers.size(); i++)
         {
             if (restaurant.vCustomers[i].getName() == ui->SelectedCustomerComboBox->currentText().toStdString())
@@ -290,5 +330,64 @@ void QtWin::on_deleteCustomerButton_clicked() {
     } else if (msgBox.clickedButton() == abortButton) {
         // abort
     }
+
+}
+
+void QtWin::on_payButton_clicked() {
+    for (Customer& _customer : restaurant.vCustomers)
+    {
+        if (ui->SelectedCustomerComboBox->currentText().toStdString()==_customer.getName())
+        {
+            if (_customer.getDueAmount() != 0)
+           _customer.Pay();
+        }
+    }
+    updateDueAmount();
+}
+
+void QtWin::updateIngterientsList() {
+
+
+
+    // Clear vector and widget
+    ui->ingredientsList->clear();
+
+    // get ingredients
+
+    if(ui->dishList->currentRow()!=0){
+        ui->ingredientsList->addItem("Default");
+
+        for (const Ingredient& ingredient : restaurant.currentIngredients)
+        {
+
+
+            ostringstream stringStream;
+            if (ingredient.IsModifieable()) {
+                stringStream << "+/- ";
+            } else {
+                stringStream << "    ";
+            }
+            stringStream << ingredient.GetName() << ": " << ingredient.GetSellPrice() << " €";
+            ui->ingredientsList->addItem(QString::fromStdString(stringStream.str()));
+        }
+        updateCurrentDishFullPrice();
+    }
+
+}
+
+void QtWin::on_addIngredientcomboBox_activated() {
+
+    if (ui->addIngredientcomboBox->currentIndex() != 0)
+    {
+        ui->ingredientsList->addItem("+/- " + ui->addIngredientcomboBox->currentText());
+        string buff = ui->addIngredientcomboBox->currentText().toStdString();
+        string currentIngredient = buff * ":";
+        Ingredient localI = Ingredients::GetIngredientByName(currentIngredient);
+        cout << localI.GetName() << localI.GetSellPrice() ;
+        restaurant.currentIngredients.push_back(localI);
+
+        updateIngterientsList();
+    }
+
 
 }

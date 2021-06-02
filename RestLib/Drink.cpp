@@ -8,7 +8,7 @@
 
 namespace RestLib
 {
-    Drink::Drink(const std::string &_drinkName):drinkName{_drinkName} {}
+    Drink::Drink(const std::string &_drinkName):drinkName{_drinkName}  , vIngredients{Ingredients::GetIngredientByName(this->GetName())} {}
     Drink::~Drink() = default;
 
     std::string Drink::GetName() const {
@@ -16,7 +16,7 @@ namespace RestLib
     }
 
     std::vector<Ingredient> Drink::GetIngredients() {
-        std::vector<Ingredient> vIngredients{Ingredients::GetIngredientByName(this->GetName())};
+
         return vIngredients;
     }
 }

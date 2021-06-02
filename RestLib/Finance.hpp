@@ -17,6 +17,7 @@ namespace RestLib {
     class Finance {
 
     public:
+        Finance() = delete;
         Finance(std::string _name, std::string _owner);
 
         enum FINANCE_TYPE {

@@ -63,4 +63,27 @@ namespace RestLib {
     vector<order> Customer::getcustomerOrderHistory() {
         return customerOrderHistory;
     }
+
+    void Customer::addToOpenOrders(order& openOrder) {
+        customerOrderHistory.push_back(openOrder);
+            openOrders.push_back(openOrder);
+            customerToPay += openOrder.getOrderPrice();
+    }
+
+    void Customer::Pay() {
+
+        std::cout << this->getName() << " has paid " << customerToPay << "€\n";
+        for(auto &&order : openOrders)
+        {
+            //order.~order();
+        }
+        openOrders.empty();
+        customerToPay = 0;
+
+    }
+
+    float Customer::getDueAmount() {
+        return customerToPay;
+
+    }
 }

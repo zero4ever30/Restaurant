@@ -26,8 +26,10 @@ std::string Finance::GetOwnerName() {
 }
 
 void Finance::AddMoneyInput(const FINANCE_TYPE &type, const double &amount) {
-cout << type << endl;
-cout << amount << endl;
+
+    cout << type << endl;
+    cout << amount << endl;
+
     accountMoney[type] = amount;
     if (type == FINANCE_PURCHASE_DISHES || type == FINANCE_PURCHASE_DRINKS) {
         accountMoney[FINANCE_PURCHASE] += amount;

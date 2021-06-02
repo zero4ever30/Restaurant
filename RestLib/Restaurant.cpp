@@ -10,7 +10,7 @@ using namespace std;
 
 namespace RestLib
 {
-    Restaurant::Restaurant(const string& restaurantName, const string& _filename) : Restaurant_name{restaurantName} {
+    Restaurant::Restaurant(const std::string& restaurantName, const std::string& ownersName , const std::string& _filename) : Restaurant_name{restaurantName}, Owners_name{ownersName} {
         ifstream Datai;                                                // new in stream object
         filename = _filename;
 
@@ -25,7 +25,7 @@ namespace RestLib
                 getline(Datai,tempN, ';');
                 Customer tempCustomer(tempV, tempN);
                 while (Datai.peek() != '\n' && !Datai.eof())
-                {   order tempOrder("","");
+                {   order tempOrder("","" , 0);
                     getline(Datai,tempOrder.orderdate,';');
                     getline(Datai,tempOrder.ordername,';');
                     tempCustomer.customerOrderHistory.push_back(move(tempOrder));
@@ -129,14 +129,14 @@ namespace RestLib
                     financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DISHES, sellPrice);
                     financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DISHES, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
 
-                    // TODO Add sellPrice to order
-                    order newDishOrder(orderDate, dish->GetDishName());
+
+                    order newDishOrder(orderDate, dish->GetDishName() ,sellPrice);
 
                     _customer.ServeDish(dish);
                     _customer.EatDish();
 
                     cout << "Customer: " << customerName << " ordered Dish: " << newDishOrder.getOrderName() << " [" << newDishOrder.getOrderDate() << "]" << endl;
-                    _customer.customerOrderHistory.push_back(newDishOrder);
+                    _customer.addToOpenOrders(newDishOrder);
                 }
 
                 // Create new drink order
@@ -144,19 +144,16 @@ namespace RestLib
                     string drinkName;
                     if (0 <= selectedMixIndex){
                         // Create mixed drink
-                        vector<DrinksBar::_DrinkType> drinkI {(DrinksBar::_DrinkType)drinkIndex, (DrinksBar::_DrinkType)selectedMixIndex};
-
-                        DrinkType newMixedDrink {DrinksBar::PrepareDrink<DrinkType>(drinkI)};
+                        DrinkType newMixedDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
                         newMixedDrink->GetName();
                         _customer.ServeDrink(newMixedDrink);
-
-                        sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
-                        price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        newMixedDrink->GetIngredients();
+                        //sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        //price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
                     } else {
                         // Create simple single Drink
-                        vector<DrinksBar::_DrinkType> drinkI {(DrinksBar::_DrinkType)drinkIndex};
 
-                        DrinkType newDrink {DrinksBar::PrepareDrink<DrinkType, Drink>(drinkI)};
+                        DrinkType newDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
                         drinkName = newDrink->GetName();
                         _customer.ServeDrink(newDrink);
 
@@ -169,10 +166,9 @@ namespace RestLib
                     financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DRINKS, price);
 
                     _customer.DrinkDrink();
-                    order newDrinkOrder(orderDate, drinkName);
-
+                    order newDrinkOrder(orderDate, drinkName , sellPrice);
                     cout << "Customer: " << customerName << " ordered Drink: " << newDrinkOrder.getOrderName() << " [" << newDrinkOrder.getOrderDate() << "]" << endl;
-                    _customer.customerOrderHistory.push_back(newDrinkOrder);
+                    _customer.addToOpenOrders(newDrinkOrder);
                 }
                 break;
             }

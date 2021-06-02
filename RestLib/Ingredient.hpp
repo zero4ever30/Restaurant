@@ -26,7 +26,7 @@ namespace RestLib {
         bool modifieable;
     };
 
-    using Ingredient = Ingredient;
+    //using Ingredient = Ingredient;
 }
 
 

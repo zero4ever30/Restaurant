@@ -13,15 +13,16 @@ namespace RestLib
     class order {
     public:
         order() = delete;
-        order(std::string _orderdate, std::string _ordername);
+
+        order(std::string _orderdate, std::string _ordername , double price);
         std::string getOrderName();
         std::string getOrderDate();
-
+        double getOrderPrice();
         friend class Restaurant;
     private:
         std::string orderdate;
         std::string ordername;
-
+        double orderPrice;
     };
 
 }
