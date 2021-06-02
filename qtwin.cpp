@@ -39,7 +39,7 @@ QtWin::~QtWin() {
 void QtWin::on_tabOrder_currentChanged(int index)
 {
     if (index == TABRESTAURANT) {
-        updateRestaurantTable();
+
     } else if (index == TABORDER) {
         updateOrderTab();
     } else if (index == TABCH) {
@@ -85,14 +85,11 @@ void QtWin::on_orderButton_clicked()
             restaurant.createNewOrder(selectedCustomer, selectedDishIndex, selectedDrinkIndex, selectedMixIndex);
             updateOrderTab();
             updateDueAmount();
-            updateRestaurantTable();
         }
     }
     else{
         QMessageBox::critical(this , "Error!!" , "The customer must be selected before hand");
     }
-
-
 }
 
 //Update the OrderTab
@@ -346,6 +343,7 @@ void QtWin::on_payButton_clicked() {
         }
     }
     updateDueAmount();
+    updateRestaurantTable();
 }
 
 void QtWin::updateIngterientsList() {
@@ -396,10 +394,10 @@ void QtWin::on_addIngredientcomboBox_activated() {
 }
 
 void QtWin::updateRestaurantTable() {
+    int i {ui->restaurantTable->rowCount()};
 
-    // the function has allready been called in the right places
-    /*
-    int i = 1 + ui->restaurantTable->columnCount();
+    ui->restaurantTable->setColumnCount(3);
+    ui->restaurantTable->setRowCount(i+1);
 
     QTableWidgetItem *Cost;
     QTableWidgetItem *Income;
@@ -407,21 +405,22 @@ void QtWin::updateRestaurantTable() {
     Cost = new QTableWidgetItem;
     Income = new QTableWidgetItem;
     Profit = new QTableWidgetItem;
-    Cost->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
-    Income->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_SELL)));
-    Profit->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_SELL) -
-                                            restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
+
+    Finance finance {restaurant.GetRestaurantStatistics()};
+
+    Cost->setText(QString::number(finance.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
+    Income->setText(QString::number(finance.GetMoneyAmount(RestLib::Finance::FINANCE_SELL)));
+    Profit->setText(QString::number(finance.GetMoneyAmount(RestLib::Finance::FINANCE_SELL) - finance.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
+
     ui->restaurantTable->setItem(i,0,Cost);
     ui->restaurantTable->setItem(i,1,Income);
-    ui->restaurantTable->setItem(i,1,Profit);
+    ui->restaurantTable->setItem(i,2,Profit);
 
     //headers
     QStringList hLabels;
     hLabels << "Cost" << "Income" << "Profit" ;
-    ui->CHTable->setHorizontalHeaderLabels(hLabels);
-    ui->CHTable->setAlternatingRowColors(true);
-
+    ui->restaurantTable->setHorizontalHeaderLabels(hLabels);
+    ui->restaurantTable->setAlternatingRowColors(true);
 
     QWidget::update();
-*/
 }

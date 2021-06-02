@@ -36,7 +36,7 @@ namespace RestLib
         std::vector<Ingredient> currentIngredients;
         void createNewOrder(const std::string& customerName, const int& dishIndex , const int& drinkIndex, const int& selectedMixIndex);
 
-
+        Finance GetRestaurantStatistics();
 
     protected:
 
@@ -46,7 +46,7 @@ namespace RestLib
         std::string Owners_name;
         std::vector<item> Stock;
         std::string filename;
-        RestLib::Finance financeStatistics {Restaurant_name , Owners_name };
+        Finance financeStatistics {Restaurant_name , Owners_name };
         friend class QtWin;
     };
 }

@@ -145,7 +145,7 @@ namespace RestLib
                     if (0 <= selectedMixIndex){
                         // Create mixed drink
                         DrinkType newMixedDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
-                        newMixedDrink->GetName();
+                        drinkName = newMixedDrink->GetName();
                         newMixedDrink->GetIngredients();
                         sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
                         price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
@@ -175,6 +175,9 @@ namespace RestLib
         }
     }
 
+    Finance Restaurant::GetRestaurantStatistics() {
+        return this->financeStatistics;
+    }
 
 
 }
