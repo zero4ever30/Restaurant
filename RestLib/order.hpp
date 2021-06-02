@@ -17,7 +17,7 @@ namespace RestLib
         order(std::string _orderdate, std::string _ordername , double price);
         std::string getOrderName();
         std::string getOrderDate();
-        double getOrderPrice();
+        double getOrderPrice() const;
         friend class Restaurant;
     private:
         std::string orderdate;

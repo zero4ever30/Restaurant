@@ -25,7 +25,7 @@ namespace RestLib {
     }
 
     int AbstractDish::GetNumberIngredients() const {
-        return vIngredients.size();
+        return static_cast<int>(vIngredients.size());
     }
 
     void AbstractDish::AddIngredients(const Ingredient& _ingredient) {

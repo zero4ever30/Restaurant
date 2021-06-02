@@ -20,7 +20,7 @@ namespace RestLib {
     }
 
     int MixedDrink::getNumberIngredients() const {
-        return vIngredients.size();
+        return static_cast<int>(vIngredients.size());
     }
 
     void MixedDrink::AddIngredients(const Ingredient& _ingredient) {

@@ -57,7 +57,7 @@ namespace RestLib {
     }
 
     int Customer::getNumberOfOrdersFromHistory() {
-        return this->customerOrderHistory.size();
+        return static_cast<int>(this->customerOrderHistory.size());
     }
 
     vector<order> Customer::getcustomerOrderHistory() {

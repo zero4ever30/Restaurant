@@ -16,7 +16,7 @@ using namespace RestLib;
 order::order(string _orderdate, string _ordername ,double price) : orderdate{move(_orderdate)} , ordername {move(_ordername)} , orderPrice{price} {
 
 }
-double order::getOrderPrice(){
+double order::getOrderPrice() const{
     return orderPrice;
 }
 
