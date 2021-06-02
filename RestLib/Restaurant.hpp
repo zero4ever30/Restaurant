@@ -18,6 +18,7 @@
 #include "Ingredients.hpp"
 #include "Finance.hpp"
 
+
 namespace RestLib
 {
     class Restaurant {
@@ -35,6 +36,8 @@ namespace RestLib
         std::vector<Ingredient> currentIngredients;
         void createNewOrder(const std::string& customerName, const int& dishIndex , const int& drinkIndex, const int& selectedMixIndex);
 
+
+
     protected:
 
 
@@ -44,6 +47,7 @@ namespace RestLib
         std::vector<item> Stock;
         std::string filename;
         RestLib::Finance financeStatistics {Restaurant_name , Owners_name };
+        friend class QtWin;
     };
 }
 

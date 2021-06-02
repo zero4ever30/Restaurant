@@ -43,7 +43,7 @@ namespace RestLib
         Ingredients::LoadIngredientsFromFile("IngredientList.txt");
 
         // Load FinanceClass
-        financeStatistics.LoadFinanceClass("FinanceStatistics.txt");
+        this->financeStatistics.LoadFinanceClass("FinanceStatistics.txt");
     }
 
     void Restaurant::SaveHistory() {
@@ -72,7 +72,7 @@ namespace RestLib
                  << "Please Enter a file name ending with .txt .. Exting with error # : " << e.code().message() << "\n" << flush;
         }
 
-        financeStatistics.SaveFinanceClass("FinanceStatistics.txt");
+        this->financeStatistics.SaveFinanceClass("FinanceStatistics.txt");
     }
 
     Customer& Restaurant::FindCustomer(string _customerLastName) {
@@ -126,8 +126,8 @@ namespace RestLib
                     DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , this->currentIngredients);
 
                     sellPrice = Ingredients::CalculateIngredientsSellPrice(this->currentIngredients);
-                    financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DISHES, sellPrice);
-                    financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DISHES, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
+                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DISHES, sellPrice);
+                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DISHES, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
 
 
                     order newDishOrder(orderDate, dish->GetDishName() ,sellPrice);
@@ -146,10 +146,10 @@ namespace RestLib
                         // Create mixed drink
                         DrinkType newMixedDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex , (DrinksBar::_DrinkType) selectedMixIndex);
                         newMixedDrink->GetName();
-                        _customer.ServeDrink(newMixedDrink);
                         newMixedDrink->GetIngredients();
-                        //sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
-                        //price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        sellPrice = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        price = Ingredients::CalculateIngredientsSellPrice(newMixedDrink->GetIngredients());
+                        _customer.ServeDrink(newMixedDrink);
                     } else {
                         // Create simple single Drink
 
@@ -162,8 +162,8 @@ namespace RestLib
                         price = localI.GetPrice();
                     }
 
-                    financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DRINKS, sellPrice);
-                    financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DRINKS, price);
+                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DRINKS, sellPrice);
+                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DRINKS, price);
 
                     _customer.DrinkDrink();
                     order newDrinkOrder(orderDate, drinkName , sellPrice);

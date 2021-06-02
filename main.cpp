@@ -26,20 +26,11 @@ int main(int argc , char *argv[]) {
 
     //std::system("cls");
 
-    DrinkType newMixedDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)1 , (DrinksBar::_DrinkType) 1);
-    std::cout << newMixedDrink->GetName();
-    std::vector<Ingredient> X = newMixedDrink->GetIngredients();
-    for (auto item : X)
-    {
-        item.
-    }
-
-    /*
     QApplication b(argc, argv);
     QtWin Win1;
     Win1.show();
     return QApplication::exec();
-*/
+
 
     return 0;
 }

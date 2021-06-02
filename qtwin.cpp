@@ -15,6 +15,7 @@
 #include "Customer.hpp"
 #include <vector>
 #include "Ingredients.hpp"
+#include "Finance.hpp"
 
 using namespace std;
 using namespace RestLib;
@@ -27,6 +28,7 @@ QtWin::QtWin(QWidget *parent) :
     // All updates must be here too!!!!!!!!
     updateSelectedCustomerComboBox();
     updateOrderTab();
+    updateRestaurantTable();
 }
 
 QtWin::~QtWin() {
@@ -37,7 +39,7 @@ QtWin::~QtWin() {
 void QtWin::on_tabOrder_currentChanged(int index)
 {
     if (index == TABRESTAURANT) {
-
+        updateRestaurantTable();
     } else if (index == TABORDER) {
         updateOrderTab();
     } else if (index == TABCH) {
@@ -83,6 +85,7 @@ void QtWin::on_orderButton_clicked()
             restaurant.createNewOrder(selectedCustomer, selectedDishIndex, selectedDrinkIndex, selectedMixIndex);
             updateOrderTab();
             updateDueAmount();
+            updateRestaurantTable();
         }
     }
     else{
@@ -390,4 +393,35 @@ void QtWin::on_addIngredientcomboBox_activated() {
     }
 
 
+}
+
+void QtWin::updateRestaurantTable() {
+
+    // the function has allready been called in the right places
+    /*
+    int i = 1 + ui->restaurantTable->columnCount();
+
+    QTableWidgetItem *Cost;
+    QTableWidgetItem *Income;
+    QTableWidgetItem *Profit;
+    Cost = new QTableWidgetItem;
+    Income = new QTableWidgetItem;
+    Profit = new QTableWidgetItem;
+    Cost->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
+    Income->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_SELL)));
+    Profit->setText(QString::number(restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_SELL) -
+                                            restaurant.financeStatistics.GetMoneyAmount(RestLib::Finance::FINANCE_PURCHASE)));
+    ui->restaurantTable->setItem(i,0,Cost);
+    ui->restaurantTable->setItem(i,1,Income);
+    ui->restaurantTable->setItem(i,1,Profit);
+
+    //headers
+    QStringList hLabels;
+    hLabels << "Cost" << "Income" << "Profit" ;
+    ui->CHTable->setHorizontalHeaderLabels(hLabels);
+    ui->CHTable->setAlternatingRowColors(true);
+
+
+    QWidget::update();
+*/
 }

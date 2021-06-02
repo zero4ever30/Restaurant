@@ -41,6 +41,7 @@ private slots:
     void on_deleteCustomerButton_clicked();
     void on_payButton_clicked();
     void on_addIngredientcomboBox_activated();
+    void updateRestaurantTable();
 
 private:
     Ui::QtWin *ui;
