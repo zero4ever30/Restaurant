@@ -28,6 +28,7 @@ namespace RestLib
         virtual void AddIngredients(const std::string& _ingredient) = 0;*/
     private:
         std::string drinkName;
+        std::vector<Ingredient> vIngredients;
     };
     using DrinkType = std::unique_ptr<Drink>;
 }

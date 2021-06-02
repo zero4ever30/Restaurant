@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>390</y>
-     <width>901</width>
+     <width>1011</width>
      <height>391</height>
     </rect>
    </property>
@@ -32,7 +32,7 @@
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="elideMode">
     <enum>Qt::ElideMiddle</enum>
@@ -41,17 +41,14 @@
     <attribute name="title">
      <string>Restaurant</string>
     </attribute>
-    <widget class="QPushButton" name="RefillButton">
+    <widget class="QTableWidget" name="restaurantTable">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>250</y>
-       <width>80</width>
-       <height>21</height>
+       <x>20</x>
+       <y>40</y>
+       <width>481</width>
+       <height>311</height>
       </rect>
-     </property>
-     <property name="text">
-      <string>Refill Button</string>
      </property>
     </widget>
    </widget>
@@ -74,7 +71,7 @@
       <rect>
        <x>580</x>
        <y>130</y>
-       <width>111</width>
+       <width>161</width>
        <height>192</height>
       </rect>
      </property>
@@ -124,7 +121,7 @@
        <x>290</x>
        <y>130</y>
        <width>256</width>
-       <height>192</height>
+       <height>161</height>
       </rect>
      </property>
     </widget>
@@ -139,16 +136,6 @@
      </property>
      <property name="text">
       <string>Ingredients</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="addIngredientText">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>300</y>
-       <width>251</width>
-       <height>21</height>
-      </rect>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -167,9 +154,9 @@
     <widget class="QListWidget" name="mixDrinksList">
      <property name="geometry">
       <rect>
-       <x>720</x>
+       <x>810</x>
        <y>130</y>
-       <width>111</width>
+       <width>161</width>
        <height>192</height>
       </rect>
      </property>
@@ -177,7 +164,7 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>720</x>
+       <x>810</x>
        <y>110</y>
        <width>47</width>
        <height>13</height>
@@ -185,6 +172,16 @@
      </property>
      <property name="text">
       <string>Mix with</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="addIngredientcomboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>251</width>
+       <height>22</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -239,8 +236,8 @@
   <widget class="QPushButton" name="pushButton_save">
    <property name="geometry">
     <rect>
-     <x>950</x>
-     <y>740</y>
+     <x>1050</x>
+     <y>700</y>
      <width>80</width>
      <height>21</height>
     </rect>
@@ -323,6 +320,32 @@
      <string>Last name</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="amountdueText">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>360</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Amount due : </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="payButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>380</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pay</string>
+   </property>
   </widget>
  </widget>
  <resources/>

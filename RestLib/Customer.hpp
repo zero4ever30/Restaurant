@@ -35,15 +35,19 @@ namespace RestLib {
         void printOrders ();
         int getNumberOfOrdersFromHistory();
         vector<order> getcustomerOrderHistory();
+        void addToOpenOrders(order&);
+        void Pay();
+        float getDueAmount();
     protected:
 
     private:
         string customerName;
         string customerLastName;
-        float customerToPay;
+        float customerToPay {0};
         DishType customerDish;
         DrinkType customerDrink;
         vector<order> customerOrderHistory;
+        vector<order> openOrders;
     };
 }
 

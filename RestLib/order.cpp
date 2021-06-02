@@ -13,8 +13,11 @@
 using namespace std;
 using namespace RestLib;
 
-order::order(string _orderdate, string _ordername) : orderdate{move(_orderdate)} , ordername {move(_ordername)} {
+order::order(string _orderdate, string _ordername ,double price) : orderdate{move(_orderdate)} , ordername {move(_ordername)} , orderPrice{price} {
 
+}
+double order::getOrderPrice(){
+    return orderPrice;
 }
 
 string order::getOrderName() {

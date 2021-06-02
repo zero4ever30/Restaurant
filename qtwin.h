@@ -28,10 +28,7 @@ public:
         TABCH
     };
 
-    void updateOrderTab();
-    void updateCostumerHistoryTab();
 
-    void updateCurrentDishFullPrice();
 
 private slots:
     void on_tabOrder_currentChanged(int index);
@@ -40,15 +37,24 @@ private slots:
     void on_SelectedCustomerComboBox_currentIndexChanged();
     void on_dishList_clicked();
     void on_ingredientsList_clicked();
-    void on_addIngredientText_returnPressed();
     void on_lastNameText_returnPressed();
     void on_deleteCustomerButton_clicked();
+    void on_payButton_clicked();
+    void on_addIngredientcomboBox_activated();
+    void updateRestaurantTable();
 
 private:
     Ui::QtWin *ui;
-    RestLib::Restaurant restaurant{"Hello world" , "Database.txt"};
+    RestLib::Restaurant restaurant{"Hello world" , "Max Mustermann", "Database.txt"};
 
+    void updateOrderTab();
+    void updateCostumerHistoryTab();
+    void updateCurrentDishFullPrice();
+    void updateDueAmount();
     void updateSelectedCustomerComboBox();
+    void updateIngterientsList();
+
+
 };
 
 
