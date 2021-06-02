@@ -1,6 +1,8 @@
-//
-// Created by Momme Sherif on 20/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #ifndef FINAL_PROJECT_DISHES_HPP
 #define FINAL_PROJECT_DISHES_HPP
@@ -19,7 +21,7 @@ namespace RestLib {
     protected:
 
     private:
-        std::vector<std::string> vIngredients {"Pizza Dough", "Tomato Sauce", "Mozzarella", "Basil", "Cheese"};
+        //std::vector<std::string> vIngredients {};//{"Pizza Dough", "Tomato Sauce", "Mozzarella", "Basil", "Cheese"};
     };
 
 
@@ -32,7 +34,7 @@ namespace RestLib {
     protected:
 
     private:
-        std::vector<std::string> vIngredients {"Onions", "Carrots", "Mushrooms", "Water", "Broth", "Processed Cheese"};
+        //std::vector<std::string> vIngredients {};//{"Onions", "Carrots", "Mushrooms", "Water", "Broth", "Processed Cheese"};
     };
 
 }

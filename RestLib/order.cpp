@@ -1,20 +1,31 @@
-//
-// Created by Momme Sherif on 26/05/2021.
-//
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 
 #include "order.hpp"
 #include <iostream>
 #include <utility>
+#include <vector>
+#include "Customer.hpp"
 
-RestLib::order::order(std::string _orderdate, std::string _ordername) : orderdate{std::move(_orderdate)} , ordername {std::move(_ordername)} {
+using namespace std;
+using namespace RestLib;
+
+order::order(string _orderdate, string _ordername ,double price) : orderdate{move(_orderdate)} , ordername {move(_ordername)} , orderPrice{price} {
 
 }
+double order::getOrderPrice(){
+    return orderPrice;
+}
 
-std::string RestLib::order::getOrderName() {
+string order::getOrderName() {
     return this->ordername;
 }
 
-std::string RestLib::order::getOrderDate() {
+string order::getOrderDate() {
     return this->orderdate;
 }
+
 

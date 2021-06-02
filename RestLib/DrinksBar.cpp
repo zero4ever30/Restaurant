@@ -5,38 +5,14 @@
 */
 
 #include "DrinksBar.hpp"
-#include "AbstractDish.hpp"
 
 namespace RestLib {
-    DishType DrinksBar::OrderDrink(const DrinkType &dishType) {
-        DishType _dish {nullptr};
-
-        switch (dishType) {
-            case DrinkType::Cola:
-                //_dish = make_unique<Cola>("Cola");
-                break;
-            case DrinkType::Fanta:
-                //_dish = make_unique<Fanta>("Fanta");
-                break;
-            case DrinkType::ColaLight:
-                break;
-            case DrinkType::Sprite:
-                break;
-            case DrinkType::Water:
-                break;
-            case DrinkType::Beer:
-                break;
-            case DrinkType::Sparklingwater:
-                break;
-            case DrinkType::Redwine:
-                break;
-            case DrinkType::Whitewine:
-                break;
-        }
-
-        if (nullptr != _dish) {
-            _dish->Prepare();
-        }
-        return _dish;
+    DrinkType DrinksBar::PrepareDrink(_DrinkType const &drinkType) {
+        DrinkType _drink = std::make_unique<Drink>(DrinksBar::availableDrinks[drinkType]);
+        return _drink;
+    }
+    DrinkType DrinksBar::PrepareDrink(const _DrinkType &drinkType1, const _DrinkType &drinkType2) {
+        DrinkType _drink = std::make_unique<MixedDrink>(DrinksBar::availableDrinks[drinkType1] , DrinksBar::availableDrinks[drinkType2]);
+        return _drink;
     }
 }

@@ -1,7 +1,8 @@
-//
-// Created by Tobia on 19.05.2021.
-//
-
+/*
+ PIC - Labor Versuch 3
+ Created by Mohamed Mahmoud 930154 and Tobias Fricke 932874
+ Last Edit: 01/06/2021
+*/
 #ifndef MAIN_CPP_ABSTRACTDISH_HPP
 #define MAIN_CPP_ABSTRACTDISH_HPP
 
@@ -9,6 +10,8 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <string>
+#include "Ingredient.hpp"
 
 namespace RestLib {
 
@@ -16,7 +19,7 @@ namespace RestLib {
     public:
         //AbstractDish() = default;
 
-        explicit AbstractDish(const std::string &&_dishName);
+        explicit AbstractDish(const std::string &&_dishName , std::vector<Ingredient> _recipe);
 
         virtual ~AbstractDish();
 
@@ -25,16 +28,16 @@ namespace RestLib {
 
         std::string GetDishName() const;
 
-        std::vector<std::string> GetIngredients() const;
+        std::vector<Ingredient> GetIngredients() const;
 
         int GetNumberIngredients() const;
 
     protected:
-        void AddIngredients(const std::string& _ingredient);
+        void AddIngredients(const Ingredient& _ingredient);
 
+        std::vector<Ingredient> vIngredients;
+        std::vector<Ingredient> vRecipe;
     private:
-        std::vector<std::string> vIngredients;
-        std::vector<std::string> Used_Ingredients;
         std::string dishName;
 
     };
