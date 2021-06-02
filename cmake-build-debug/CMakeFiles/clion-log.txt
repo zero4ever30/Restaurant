@@ -1,5 +1,9 @@
 "C:\Program Files\JetBrains\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Momme Sherif\OneDrive\FH Kiel\SS21\PIC\Labor\Restaurant"
+<<<<<<< HEAD
 -- libfort build options:  wchar support = ON;  build type = common
+=======
+-- Could NOT find Vulkan (missing: Vulkan_LIBRARY Vulkan_INCLUDE_DIR) 
+>>>>>>> Qt
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/Momme Sherif/OneDrive/FH Kiel/SS21/PIC/Labor/Restaurant/cmake-build-debug
