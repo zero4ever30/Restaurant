@@ -52,7 +52,30 @@ void Finance::LoadFinanceClass(const string &filename) {
                 auto ret {find(convertFinanceTypeToString.begin(), convertFinanceTypeToString.end(), identifier)};
                 if(ret != convertFinanceTypeToString.end()){
                     // Valid identifier
-                    AddMoneyInput<FINANCE_TYPE::FINANCE_PURCHASE_DRINKS>(this, stod(amount));
+                    auto type {static_cast<FINANCE_TYPE>(ret - convertFinanceTypeToString.begin())};
+
+                    switch (type) {
+                        case FINANCE_PURCHASE_DRINKS:
+                            AddMoneyInput<FINANCE_PURCHASE_DRINKS>(this, stod(amount));
+                            break;
+                        case FINANCE_SELL_DRINKS:
+                            AddMoneyInput<FINANCE_SELL_DRINKS>(this, stod(amount));
+                            break;
+                        case FINANCE_SELL_DISHES:
+                            AddMoneyInput<FINANCE_SELL_DISHES>(this, stod(amount));
+                            break;
+                        case FINANCE_SELL:
+                            AddMoneyInput<FINANCE_SELL>(this, stod(amount));
+                            break;
+                        case FINANCE_PURCHASE_DISHES:
+                            AddMoneyInput<FINANCE_PURCHASE_DISHES>(this, stod(amount));
+                            break;
+                        case FINANCE_PURCHASE:
+                            AddMoneyInput<FINANCE_PURCHASE>(this, stod(amount));
+                            break;
+                        case FINANCE_COUNT:
+                            break;
+                    }
                 }
 
                 if (financeReadFile.peek() == '\n') {
@@ -77,11 +100,10 @@ void Finance::SaveFinanceClass(const string &filename) {
     try {
         Savefile.open(filename, ofstream::out);
         Savefile.exceptions(ofstream::failbit | ofstream::badbit);
-        bool firstLine {true};
+        cout << "Save Finance Stats" << endl;
         for (int i = 0; i < FINANCE_COUNT; i++) {
-            if (firstLine) {
+            if (i == 0) {
                 Savefile << convertFinanceTypeToString[i] << "=" << accountMoney[i] << ";";
-                firstLine = false;
             } else {
                 Savefile << endl << convertFinanceTypeToString[i] << "=" << accountMoney[i] << ";";
             }

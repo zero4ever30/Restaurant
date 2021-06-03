@@ -54,7 +54,6 @@ namespace RestLib {
             }
         }
 
-
         double GetMoneyAmount(const FINANCE_TYPE &type);
 
     private:
