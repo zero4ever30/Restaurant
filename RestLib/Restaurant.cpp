@@ -116,8 +116,8 @@ namespace RestLib
                     price = Ingredients::CalculateIngredientsPrice(this->currentIngredients);
                     sellPrice = Ingredients::CalculateIngredientsSellPrice(this->currentIngredients);
 
-                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_SELL_DISHES>(&this->financeStatistics, sellPrice);
-                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DISHES>(&this->financeStatistics, price);
+                    financeStatistics.AddMoneyInput<Finance::FINANCE_SELL_DISHES>(sellPrice);
+                    financeStatistics.AddMoneyInput<Finance::FINANCE_PURCHASE_DISHES>( price);
 
                     order newDishOrder(orderDate, dish->GetDishName() ,sellPrice);
 
@@ -153,8 +153,8 @@ namespace RestLib
                         price = localI.GetPrice();
                     }
 
-                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_SELL_DRINKS>(&this->financeStatistics, sellPrice);
-                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DRINKS>(&this->financeStatistics, price);
+                    financeStatistics.AddMoneyInput<Finance::FINANCE_SELL_DRINKS>(sellPrice);
+                    financeStatistics.AddMoneyInput<Finance::FINANCE_PURCHASE_DRINKS>(price);
 
                     _customer.DrinkDrink();
                     order newDrinkOrder(orderDate, drinkName , sellPrice);

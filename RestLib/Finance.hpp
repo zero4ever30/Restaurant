@@ -37,29 +37,29 @@ namespace RestLib {
         void SaveFinanceClass(const std::string &filename);
 
         template<FINANCE_TYPE financeType>
-        static void AddMoneyInput(Finance* financeObj, const double &amount) {
+        void AddMoneyInput(const double &amount) {
             switch (financeType) {
                 case FINANCE_PURCHASE_DISHES:
-                    financeObj->accountMoney[FINANCE_PURCHASE_DISHES] += amount;
-                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
+                    accountMoney[FINANCE_PURCHASE_DISHES] += amount;
+                    accountMoney[FINANCE_PURCHASE] += amount;
                     break;
                 case FINANCE_PURCHASE_DRINKS:
-                    financeObj->accountMoney[FINANCE_PURCHASE_DRINKS] += amount;
-                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
+                    accountMoney[FINANCE_PURCHASE_DRINKS] += amount;
+                    accountMoney[FINANCE_PURCHASE] += amount;
                     break;
                 case FINANCE_SELL_DISHES:
-                    financeObj->accountMoney[FINANCE_SELL_DISHES] += amount;
-                    financeObj->accountMoney[FINANCE_SELL] += amount;
+                    accountMoney[FINANCE_SELL_DISHES] += amount;
+                    accountMoney[FINANCE_SELL] += amount;
                     break;
                 case FINANCE_SELL_DRINKS:
-                    financeObj->accountMoney[FINANCE_SELL_DRINKS] += amount;
-                    financeObj->accountMoney[FINANCE_SELL] += amount;
+                    accountMoney[FINANCE_SELL_DRINKS] += amount;
+                    accountMoney[FINANCE_SELL] += amount;
                     break;
                 case FINANCE_SELL:
-                    financeObj->accountMoney[FINANCE_SELL] += amount;
+                    accountMoney[FINANCE_SELL] += amount;
                     break;
                 case FINANCE_PURCHASE:
-                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
+                    accountMoney[FINANCE_PURCHASE] += amount;
                     break;
             }
         }

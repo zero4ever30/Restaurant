@@ -56,22 +56,22 @@ void Finance::LoadFinanceClass(const string &filename) {
 
                     switch (type) {
                         case FINANCE_PURCHASE_DRINKS:
-                            AddMoneyInput<FINANCE_PURCHASE_DRINKS>(this, stod(amount));
+                            AddMoneyInput<FINANCE_PURCHASE_DRINKS>(stod(amount));
                             break;
                         case FINANCE_SELL_DRINKS:
-                            AddMoneyInput<FINANCE_SELL_DRINKS>(this, stod(amount));
+                            AddMoneyInput<FINANCE_SELL_DRINKS>(stod(amount));
                             break;
                         case FINANCE_SELL_DISHES:
-                            AddMoneyInput<FINANCE_SELL_DISHES>(this, stod(amount));
+                            AddMoneyInput<FINANCE_SELL_DISHES>(stod(amount));
                             break;
                         case FINANCE_SELL:
-                            //AddMoneyInput<FINANCE_SELL>(this, stod(amount));
+                            //AddMoneyInput<FINANCE_SELL>(stod(amount));
                             break;
                         case FINANCE_PURCHASE_DISHES:
-                            AddMoneyInput<FINANCE_PURCHASE_DISHES>(this, stod(amount));
+                            AddMoneyInput<FINANCE_PURCHASE_DISHES>(stod(amount));
                             break;
                         case FINANCE_PURCHASE:
-                            //AddMoneyInput<FINANCE_PURCHASE>(this, stod(amount));
+                            //AddMoneyInput<FINANCE_PURCHASE>(stod(amount));
                             break;
                         case FINANCE_COUNT:
                             break;
