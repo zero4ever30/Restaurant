@@ -78,10 +78,6 @@ void QtWin::on_orderButton_clicked()
             int selectedDrinkIndex{ui->drinkList->currentRow() - 1};
             int selectedMixIndex{ui->mixDrinksList->currentRow() - 1};
 
-            cout << "selectedDishIndex: " << selectedDishIndex << endl;
-            cout << "selectedDrinkIndex: " << selectedDrinkIndex << endl;
-            cout << "selectedMixIndex: " << selectedMixIndex << endl;
-
             restaurant.createNewOrder(selectedCustomer, selectedDishIndex, selectedDrinkIndex, selectedMixIndex);
             updateOrderTab();
             updateDueAmount();

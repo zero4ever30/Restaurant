@@ -113,10 +113,11 @@ namespace RestLib
                 if (0 <= dishIndex) {
                     DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , this->currentIngredients);
 
+                    price = Ingredients::CalculateIngredientsPrice(this->currentIngredients);
                     sellPrice = Ingredients::CalculateIngredientsSellPrice(this->currentIngredients);
 
                     RestLib::Finance::AddMoneyInput<Finance::FINANCE_SELL_DISHES>(&this->financeStatistics, sellPrice);
-                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DISHES>(&this->financeStatistics, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
+                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DISHES>(&this->financeStatistics, price);
 
                     order newDishOrder(orderDate, dish->GetDishName() ,sellPrice);
 
@@ -129,6 +130,9 @@ namespace RestLib
 
                 // Create new drink order
                 if (0 <= drinkIndex) {
+                    price = 0.0;
+                    sellPrice = 0.0;
+
                     string drinkName;
                     if (0 <= selectedMixIndex){
                         // Create mixed drink
@@ -165,5 +169,4 @@ namespace RestLib
     Finance Restaurant::GetRestaurantStatistics() {
         return this->financeStatistics;
     }
-
 }
