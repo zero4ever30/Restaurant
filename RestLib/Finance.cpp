@@ -65,13 +65,13 @@ void Finance::LoadFinanceClass(const string &filename) {
                             AddMoneyInput<FINANCE_SELL_DISHES>(this, stod(amount));
                             break;
                         case FINANCE_SELL:
-                            AddMoneyInput<FINANCE_SELL>(this, stod(amount));
+                            //AddMoneyInput<FINANCE_SELL>(this, stod(amount));
                             break;
                         case FINANCE_PURCHASE_DISHES:
                             AddMoneyInput<FINANCE_PURCHASE_DISHES>(this, stod(amount));
                             break;
                         case FINANCE_PURCHASE:
-                            AddMoneyInput<FINANCE_PURCHASE>(this, stod(amount));
+                            //AddMoneyInput<FINANCE_PURCHASE>(this, stod(amount));
                             break;
                         case FINANCE_COUNT:
                             break;
