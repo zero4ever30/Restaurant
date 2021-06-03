@@ -66,17 +66,14 @@ namespace RestLib {
 
     void Customer::addToOpenOrders(order& openOrder) {
         customerOrderHistory.push_back(openOrder);
-            openOrders.push_back(openOrder);
+            openOrders.push(openOrder);
             customerToPay += openOrder.getOrderPrice();
     }
 
     void Customer::Pay() {
 
         std::cout << this->getName() << " has paid " << customerToPay << "€\n";
-        for(auto &&order : openOrders)
-        {
-            //order.~order();
-        }
+
         openOrders.empty();
         customerToPay = 0;
 

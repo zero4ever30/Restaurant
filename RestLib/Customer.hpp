@@ -14,6 +14,7 @@
 #include "vector"
 #include "order.hpp"
 #include "Drink.hpp"
+#include <stack>
 //#include "Restaurant.hpp"
 
 using namespace std;
@@ -47,7 +48,7 @@ namespace RestLib {
         DishType customerDish;
         DrinkType customerDrink;
         vector<order> customerOrderHistory;
-        vector<order> openOrders;
+        std::stack<order> openOrders;
     };
 }
 
