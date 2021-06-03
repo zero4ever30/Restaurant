@@ -114,9 +114,9 @@ namespace RestLib
                     DishType dish = Kitchen::CreatDish((Kitchen::_DishType) dishIndex , this->currentIngredients);
 
                     sellPrice = Ingredients::CalculateIngredientsSellPrice(this->currentIngredients);
-                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DISHES, sellPrice);
-                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DISHES, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
 
+                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_SELL_DISHES>(&this->financeStatistics, sellPrice);
+                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DISHES>(&this->financeStatistics, Ingredients::CalculateIngredientsPrice(this->currentIngredients));
 
                     order newDishOrder(orderDate, dish->GetDishName() ,sellPrice);
 
@@ -140,7 +140,6 @@ namespace RestLib
                         _customer.ServeDrink(newMixedDrink);
                     } else {
                         // Create simple single Drink
-
                         DrinkType newDrink = DrinksBar::PrepareDrink((DrinksBar::_DrinkType)drinkIndex);
                         drinkName = newDrink->GetName();
                         _customer.ServeDrink(newDrink);
@@ -150,8 +149,8 @@ namespace RestLib
                         price = localI.GetPrice();
                     }
 
-                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_SELL_DRINKS, sellPrice);
-                    this->financeStatistics.AddMoneyInput(Finance::FINANCE_PURCHASE_DRINKS, price);
+                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_SELL_DRINKS>(&this->financeStatistics, sellPrice);
+                    RestLib::Finance::AddMoneyInput<Finance::FINANCE_PURCHASE_DRINKS>(&this->financeStatistics, price);
 
                     _customer.DrinkDrink();
                     order newDrinkOrder(orderDate, drinkName , sellPrice);
@@ -166,6 +165,5 @@ namespace RestLib
     Finance Restaurant::GetRestaurantStatistics() {
         return this->financeStatistics;
     }
-
 
 }

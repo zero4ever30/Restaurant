@@ -36,7 +36,24 @@ namespace RestLib {
         void LoadFinanceClass(const std::string &filename);
         void SaveFinanceClass(const std::string &filename);
 
-        void AddMoneyInput(const FINANCE_TYPE &type, const double &amount);
+        template<FINANCE_TYPE financeType>
+        static void AddMoneyInput(Finance* financeObj, const double &amount) {
+            switch (financeType) {
+                case FINANCE_PURCHASE_DISHES:
+                    financeObj->accountMoney[FINANCE_PURCHASE_DISHES] += amount;
+                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
+                case FINANCE_PURCHASE_DRINKS:
+                    financeObj->accountMoney[FINANCE_PURCHASE_DRINKS] += amount;
+                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
+                case FINANCE_SELL_DISHES:
+                    financeObj->accountMoney[FINANCE_SELL_DISHES] += amount;
+                    financeObj->accountMoney[FINANCE_SELL] += amount;
+                case FINANCE_SELL_DRINKS:
+                    financeObj->accountMoney[FINANCE_SELL_DRINKS] += amount;
+                    financeObj->accountMoney[FINANCE_SELL] += amount;
+            }
+        }
+
         double GetMoneyAmount(const FINANCE_TYPE &type);
 
     private:
