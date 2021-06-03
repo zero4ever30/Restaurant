@@ -25,19 +25,6 @@ std::string Finance::GetOwnerName() {
     return ownerName;
 }
 
-void Finance::AddMoneyInput(const FINANCE_TYPE &type, const double &amount) {
-
-    cout << type << endl;
-    cout << amount << endl;
-
-    accountMoney[type] = amount;
-    if (type == FINANCE_PURCHASE_DISHES || type == FINANCE_PURCHASE_DRINKS) {
-        accountMoney[FINANCE_PURCHASE] += amount;
-    } else if (type == FINANCE_SELL_DISHES || type == FINANCE_SELL_DRINKS) {
-        accountMoney[FINANCE_SELL] += amount;
-    }
-}
-
 double Finance::GetMoneyAmount(const FINANCE_TYPE &type) {
     return accountMoney[type];
 }
@@ -65,7 +52,7 @@ void Finance::LoadFinanceClass(const string &filename) {
                 auto ret {find(convertFinanceTypeToString.begin(), convertFinanceTypeToString.end(), identifier)};
                 if(ret != convertFinanceTypeToString.end()){
                     // Valid identifier
-                    AddMoneyInput(static_cast<FINANCE_TYPE>(ret - convertFinanceTypeToString.begin()), stod(amount));
+                    AddMoneyInput<FINANCE_TYPE::FINANCE_PURCHASE_DRINKS>(this, stod(amount));
                 }
 
                 if (financeReadFile.peek() == '\n') {
