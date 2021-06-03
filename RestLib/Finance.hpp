@@ -51,6 +51,10 @@ namespace RestLib {
                 case FINANCE_SELL_DRINKS:
                     financeObj->accountMoney[FINANCE_SELL_DRINKS] += amount;
                     financeObj->accountMoney[FINANCE_SELL] += amount;
+                case FINANCE_SELL:
+                    financeObj->accountMoney[FINANCE_SELL] += amount;
+                case FINANCE_PURCHASE:
+                    financeObj->accountMoney[FINANCE_PURCHASE] += amount;
             }
         }
 
